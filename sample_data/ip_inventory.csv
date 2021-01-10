@@ -1,0 +1,1175 @@
+LAN IP Address,Plant Area,Network Type,Device,Comment,Fix license,Full IP
+10.11.9.2,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP6,Zinc Market Scales SCADA/View Node,,010.011.009.002
+10.11.9.14,Refinery,iFIX Nodes & Ethernet Switches,PPPCRF4,Softener Retreat View Node,2001760626,010.011.009.014
+10.11.9.15,Refinery,PLCs & Control Equipment,RFMBPE1,MB+/Ethernet Bridge,,010.011.009.015
+10.11.9.16,Refinery,iFIX Nodes & Ethernet Switches,PPPCRF6,KBA Retreat View Node,200170627,010.011.009.016
+10.11.9.28,Miscellaneous,iFIX Nodes & Ethernet Switches,EGX100,MB+/Ethernet Bridge Sepams(Workshop sub),,010.011.009.028
+10.11.9.35,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF4,Operator Workstation - Top Control Room,200250094,010.011.009.035
+10.11.9.36,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF12,Operator Workstation - Shift Team Leader,200250092,010.011.009.036
+10.11.9.37,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF13,Operator Workstation - Day Team Leader,200250091,010.011.009.037
+10.11.9.41,Refinery,iFIX Nodes & Ethernet Switches,PP_KBA3,KBA Retreat View Node,,010.011.009.041
+10.11.9.43,Zinc Plant,PLCs & Control Equipment,ZPMBPE1,MB+/Ethernet Bridge,,010.011.009.043
+10.11.9.45,Miscellaneous,iFIX Nodes & Ethernet Switches,,SMS Ethernet/Modbus Bridge,,010.011.009.045
+10.11.9.47,Miscellaneous,iFIX Nodes & Ethernet Switches,PP_SMS,SMS (Site Metering System) SCADA Node,,010.011.009.047
+10.11.9.53,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP1,Primary SCADA / Operator Workstation (Purification Humpy),200250082,010.011.009.053
+10.11.9.54,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP2,"Secondary SCADA / Operator Workstation
+ (Cell Floor Humpy)",200033538,010.011.009.054
+10.11.9.57,Zinc Plant,iFIX Nodes & Ethernet Switches,ZPSW1,"ZP Auto Batch Hirschmann Ethernet Switch
+(pw windmill)",,010.011.009.057
+10.11.9.59,Kilns/KDR,iFIX Nodes & Ethernet Switches,KDRSW1,"Kilns Hirschmann Ethernet Switch
+(pw windmill)",,010.011.009.059
+10.11.9.61,Kilns/KDR,iFIX Nodes & Ethernet Switches,,Slag Fumer Process PLC Room Hirschmann Ethernet Switch (pw windmill),,010.011.009.061
+10.11.9.63,Zinc Plant,PLCs & Control Equipment,ZPPLC1,"Zinc Plant Auto Batch PLC
+(admin/windmill)",,010.011.009.063
+10.11.9.64,Zinc Plant,PLCs & Control Equipment,,Zinc Plant Cell Floor ABB PLC #1 Rectifier,,010.011.009.064
+10.11.9.65,Slag Fumer,PLCs & Control Equipment,SFMBPE1,MB+/Ethernet Bridge,,010.011.009.065
+10.11.9.67,Kilns/KDR,PLCs & Control Equipment,,KDR Waste Water Ethernet/Modbus Bridge,,010.011.009.067
+10.11.9.69,Miscellaneous,iFIX Nodes & Ethernet Switches,,Engineering Test PLC,,010.011.009.069
+10.11.9.81,Copper Plant,iFIX Nodes & Ethernet Switches,,"Copper Plant Hirschmann Ethernet Switch
+(pw windmill)",,010.011.009.081
+10.11.9.84,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP4,,,010.011.009.084
+10.11.9.85,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP5,,,010.011.009.085
+10.11.9.88,Zinc Plant,PLCs & Control Equipment,,pi,,010.011.009.088
+10.11.9.89,Zinc Plant,PLCs & Control Equipment,,,,010.011.009.089
+10.11.9.90,Zinc Plant,PLCs & Control Equipment,,,,010.011.009.090
+10.11.9.93,Miscellaneous,iFIX Nodes & Ethernet Switches,PP_FIX1,1st Spare Fix Machine,,010.011.009.093
+10.11.9.95,Miscellaneous,iFIX Nodes & Ethernet Switches,PP_FIX2,2nd Spare Fix Machine,,010.011.009.095
+10.11.9.101,Slag Fumer,iFIX Nodes & Ethernet Switches,,"Slag Fumer FWG Hirschmann Ethernet Switch
+(pw windmill)",,010.011.009.101
+10.11.9.101,Miscellaneous,iFIX Nodes & Ethernet Switches,,Engineering Testing - Hirschmann Ethernet Switch,,010.011.009.101
+10.11.9.103,Miscellaneous,iFIX Nodes & Ethernet Switches,,Engineering Testing - Ethernet/MB+ Bridge,,010.011.009.103
+10.11.9.105,Power Plant,PLCs & Control Equipment,,Power Plant Diesel Ethernet/Modbus Bridge,,010.011.009.105
+10.11.9.106,Power Plant,PLCs & Control Equipment,PPEGX1,Power Plant EGX gateway for RTU unit,,010.011.009.106
+10.11.9.107,Miscellaneous,iFIX Nodes & Ethernet Switches,,Engineering Testing  Ethernet/Modbus Bridge,,010.011.009.107
+10.11.9.108,Zinc Plant,PLCs & Control Equipment,,MSM Modbus/Ethernet Bridge,,010.011.009.108
+10.11.9.109,Slag Fumer,iFIX Nodes & Ethernet Switches,,Process PLC Room  Hirschmann Ethernet Switch (ex PETS) (pw windmill),,010.011.009.109
+10.11.9.109,Miscellaneous,iFIX Nodes & Ethernet Switches,,Engineering Testing - Hirschmann Ethernet Switch,,010.011.009.109
+10.11.9.111,Refinery,iFIX Nodes & Ethernet Switches,PPSPCSLM3,SLMM3 SCADA/View Node user               :administrator pass :deskpro,200250089,010.011.009.111
+10.11.9.113,Refinery,iFIX Nodes & Ethernet Switches,PP_SLMM3B,"SLMM3 SCADA/View Node Spare 
+(not on network)",,010.011.009.113
+10.11.9.115,Refinery,iFIX Nodes & Ethernet Switches,B_MOULD,Butt Wheel SCADA/View Node,200250088,010.011.009.115
+10.11.9.127,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCEM,Energy Management Server,,010.011.009.127
+10.11.9.128,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCEM1,New Energy Management Server,,010.011.009.128
+10.11.9.132,Refinery,iFIX Nodes & Ethernet Switches,PP_KBA5,SLMM1 Switch Room Mtce PC,200250077,010.011.009.132
+10.11.9.133,Refinery,PLCs & Control Equipment,,SLMM1 PLC,,010.011.009.133
+10.11.9.136,Zinc Plant,PLCs & Control Equipment,,Zinc Plant Cell Floor PLC (rectifier current control),,010.011.009.136
+10.11.9.176,Power Plant,PLCs & Control Equipment,SWPLC,Salt Water Pumps PLC,,010.011.009.176
+10.11.9.178,Power Plant,iFIX Nodes & Ethernet Switches,PPPCPP1,Primary SCADA / Operator Workstation,200247417,010.011.009.178
+10.11.9.180,Power Plant,PLCs & Control Equipment,SWMBE1,Modbus/Ethernet Bridge #1 (Power Meters & VFI),,010.011.009.180
+10.11.9.205,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP3,,,010.011.009.205
+10.11.9.206,Zinc Plant,iFIX Nodes & Ethernet Switches,S1ENG,Mtce PC for #1 Rectifier (ABB),,010.011.009.206
+10.11.9.207,Zinc Plant,PLCs & Control Equipment,EGX100,Modbus/Ethernet Bridge #1 (Sepams),,010.011.009.207
+10.11.9.208,Acid Plant,PLCs & Control Equipment,EGX100,Modbus/Ethernet Bridge Sepams (Acid sub),,010.011.009.208
+10.11.9.209,Miscellaneous,iFIX Nodes & Ethernet Switches,EGX100,MB+/Ethernet Bridge Sepams(Refinery sub),,010.011.009.209
+10.11.9.210,Miscellaneous,iFIX Nodes & Ethernet Switches,EGX100,MB+/Ethernet Bridge Sepams(Spare ),,010.011.009.210
+10.11.9.211,Miscellaneous,iFIX Nodes & Ethernet Switches,,MB+/Ethernet Bridge Sepams(Spare ),,010.011.009.211
+10.11.9.212,Miscellaneous,iFIX Nodes & Ethernet Switches,,MB+/Ethernet Bridge Sepams(Spare ),,010.011.009.212
+10.11.9.213,Miscellaneous,iFIX Nodes & Ethernet Switches,,MB+/Ethernet Bridge Sepams(Spare ),,010.011.009.213
+10.12.0.1,Fume Control,iFIX Nodes & Ethernet Switches,PPPCFC1,Primary SCADA,200250071,010.012.000.001
+10.12.0.2,Fume Control,iFIX Nodes & Ethernet Switches,PPPCFC2,Secondary SCADA,200250072,010.012.000.002
+10.12.0.3,Fume Control,iFIX Nodes & Ethernet Switches,PPPCFC3,Maintenance Workstation,200250101,010.012.000.003
+10.12.0.4,Fume Control,iFIX Nodes & Ethernet Switches,PPPCFC4,Operator Workstation SP,200250111,010.012.000.004
+10.12.0.5,Fume Control,iFIX Nodes & Ethernet Switches,PPPCFC5,Operator Workstation SP,200187982,010.012.000.005
+10.12.0.6,Fume Control,iFIX Nodes & Ethernet Switches,PPPCFC6,Operator Workstation FC,200250104,010.012.000.006
+10.12.0.7,Fume Control,iFIX Nodes & Ethernet Switches,PPPCFC7,Operator Workstation FC,200250105,010.012.000.007
+10.12.0.8,Fume Control,iFIX Nodes & Ethernet Switches,PPPCFC8,Operator Workstation SP,200250103,010.012.000.008
+10.12.0.9,Fume Control,iFIX Nodes & Ethernet Switches,PPPCFC9,Spare iFIX,,010.012.000.009
+10.12.0.10,Fume Control,iFIX Nodes & Ethernet Switches,,,,010.012.000.010
+10.12.0.11,Fume Control,iFIX Nodes & Ethernet Switches,,,,010.012.000.011
+10.12.0.12,Fume Control,iFIX Nodes & Ethernet Switches,,,,010.012.000.012
+10.12.0.13,Fume Control,iFIX Nodes & Ethernet Switches,,,,010.012.000.013
+10.12.0.14,Fume Control,iFIX Nodes & Ethernet Switches,,,,010.012.000.014
+10.12.0.15,Fume Control,iFIX Nodes & Ethernet Switches,,,,010.012.000.015
+10.12.0.16,Fume Control,iFIX Nodes & Ethernet Switches,,F3 Fans Spare Switch (in E&I office),,010.012.000.016
+10.12.0.17,Fume Control,iFIX Nodes & Ethernet Switches,FCSW4,F3 Fans Ethernet Switch,,010.012.000.017
+10.12.0.18,Fume Control,iFIX Nodes & Ethernet Switches,FCSW3,Ethernet Switch,,010.012.000.018
+10.12.0.19,Fume Control,iFIX Nodes & Ethernet Switches,FCSW2,Ethernet Swtich,,010.012.000.019
+10.12.0.20,Fume Control,iFIX Nodes & Ethernet Switches,FCSW1,Ethernet Switch,,010.012.000.020
+10.12.0.21,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF1,Primary SCADA,200250067,010.012.000.021
+10.12.0.22,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF2,Secondary SCADA,200250068,010.012.000.022
+10.12.0.23,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF3,Maintenance Workstation,200250098,010.012.000.023
+10.12.0.24,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF4,Operator Workstation #1,200250097,010.012.000.024
+10.12.0.25,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF5,Operator Workstation #2,200250100,010.012.000.025
+10.12.0.26,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF6,,,010.012.000.026
+10.12.0.27,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCSRF1,Operator Workstation,200250085,010.012.000.027
+10.12.0.28,Blast Furnace,iFIX Nodes & Ethernet Switches,,,,010.012.000.028
+10.12.0.29,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF9,CDF Operator Workstation,200250102,010.012.000.029
+10.12.0.30,Blast Furnace,iFIX Nodes & Ethernet Switches,,,,010.012.000.030
+10.12.0.31,Blast Furnace,iFIX Nodes & Ethernet Switches,,BF Mtce laptop,,010.012.000.031
+10.12.0.32,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCCOKE,BF Coke PC,,010.012.000.032
+10.12.0.33,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF8,Top Floor Operator Workstation,200250099,010.012.000.033
+10.12.0.34,Blast Furnace,iFIX Nodes & Ethernet Switches,BFTS1,RS232 Terminal Server (Coke Scales),,010.012.000.034
+10.12.0.35,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF15,,,010.012.000.035
+10.12.0.36,Blast Furnace,iFIX Nodes & Ethernet Switches,BFSW3,Blast Furnace Top Floor Switch,,010.012.000.036
+10.12.0.37,Blast Furnace,iFIX Nodes & Ethernet Switches,BFSW2,Coke Scales / Meccano Set Switch,,010.012.000.037
+10.12.0.38,Blast Furnace,iFIX Nodes & Ethernet Switches,DFSW1,Dross Floor Ethernet Switch,,010.012.000.038
+10.12.0.39,Blast Furnace,iFIX Nodes & Ethernet Switches,SRFSW1,SRF Ethernet Switch,,010.012.000.039
+10.12.0.40,Blast Furnace,iFIX Nodes & Ethernet Switches,BFSW1A/B,Blast Furnace Ethernet Switch,,010.012.000.040
+10.12.0.41,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP1,Primary SCADA,200236158,010.012.000.041
+10.12.0.42,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP2,Secondary SCADA,200236159,010.012.000.042
+10.12.0.43,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP3,Maintenance Workstation,100228780,010.012.000.043
+10.12.0.44,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP4,ProWORX Maintenance Workstation,,010.012.000.044
+10.12.0.45,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.045
+10.12.0.46,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.046
+10.12.0.47,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.047
+10.12.0.48,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.048
+10.12.0.49,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.049
+10.12.0.50,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.050
+10.12.0.51,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.051
+10.12.0.52,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.052
+10.12.0.53,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.053
+10.12.0.54,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.054
+10.12.0.55,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.055
+10.12.0.56,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.056
+10.12.0.57,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.057
+10.12.0.58,Acid Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.058
+10.12.0.59,Acid Plant,iFIX Nodes & Ethernet Switches,APSW2,Primary Acid Ethernet Switch,,010.012.000.059
+10.12.0.60,Acid Plant,iFIX Nodes & Ethernet Switches,APSW1,Acid Plant Ethernet Switch,,010.012.000.060
+10.12.0.61,PETs Plant,iFIX Nodes & Ethernet Switches,PPPCPET1,Primary SCADA,200250073,010.012.000.061
+10.12.0.62,PETs Plant,iFIX Nodes & Ethernet Switches,PPPCPET2,Secondary SCADA,200250074,010.012.000.062
+10.12.0.63,PETs Plant,iFIX Nodes & Ethernet Switches,PPPCPET3,Maintenance Workstation,200250107,010.012.000.063
+10.12.0.64,PETs Plant,iFIX Nodes & Ethernet Switches,PPPCPET4,Operator Workstation #1,200250109,010.012.000.064
+10.12.0.65,PETs Plant,iFIX Nodes & Ethernet Switches,PPPCPET5,Operator Workstation #2,200250106,010.012.000.065
+10.12.0.66,PETs Plant,iFIX Nodes & Ethernet Switches,PPPCPET6,Operator Workstation #3,,010.012.000.066
+10.12.0.67,PETs Plant,iFIX Nodes & Ethernet Switches,PPPCPET7,Operator Workstation #1(New),200250108,010.012.000.067
+10.12.0.68,PETs Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.068
+10.12.0.69,PETs Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.069
+10.12.0.70,PETs Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.070
+10.12.0.71,PETs Plant,iFIX Nodes & Ethernet Switches,PPPCSTP1,STP SCADA,200250084,010.012.000.071
+10.12.0.72,PETs Plant,iFIX Nodes & Ethernet Switches,,PETS Water Analyser,,010.012.000.072
+10.12.0.73,PETs Plant,iFIX Nodes & Ethernet Switches,,Sedimentation Basin Mouth Water Analyser,,010.012.000.073
+10.12.0.74,PETs Plant,iFIX Nodes & Ethernet Switches,,Wooden Culvert South Water Analyser,,010.012.000.074
+10.12.0.75,PETs Plant,iFIX Nodes & Ethernet Switches,PPPCPET15,,,010.012.000.075
+10.12.0.76,PETs Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.076
+10.12.0.77,PETs Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.077
+10.12.0.78,PETs Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.078
+10.12.0.79,PETs Plant,iFIX Nodes & Ethernet Switches,STPSW1,STP Switch,,010.012.000.079
+10.12.0.80,PETs Plant,iFIX Nodes & Ethernet Switches,PETSW1,Ethernet Switch,,010.012.000.080
+10.12.0.87,Zinc Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.087
+10.12.0.88,Zinc Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.088
+10.12.0.89,Zinc Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.089
+10.12.0.90,Zinc Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.090
+10.12.0.92,Zinc Plant,iFIX Nodes & Ethernet Switches,,Zinc WTP AAC PLC,,010.012.000.092
+10.12.0.93,Zinc Plant,iFIX Nodes & Ethernet Switches,,Zinc WTP bAC PLC,,010.012.000.093
+10.12.0.94,Zinc Plant,iFIX Nodes & Ethernet Switches,,Zinc WTP HMI Magellis Touch,,010.012.000.094
+10.12.0.95,Zinc Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.095
+10.12.0.96,Zinc Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.096
+10.12.0.97,Zinc Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.097
+10.12.0.98,Zinc Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.098
+10.12.0.99,Zinc Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.099
+10.12.0.102,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.102
+10.12.0.103,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.103
+10.12.0.104,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.104
+10.12.0.105,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.105
+10.12.0.106,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.106
+10.12.0.107,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.107
+10.12.0.108,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.108
+10.12.0.109,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.109
+10.12.0.110,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.110
+10.12.0.111,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.111
+10.12.0.112,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.112
+10.12.0.113,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.113
+10.12.0.114,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.114
+10.12.0.115,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.115
+10.12.0.116,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.116
+10.12.0.117,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.117
+10.12.0.118,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.118
+10.12.0.119,Power Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.119
+10.12.0.120,Power Plant,iFIX Nodes & Ethernet Switches,PPSW1,Ethernet Switch,,010.012.000.120
+10.12.0.121,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF1,Primary SCADA/View - Top Control Room,200250065,010.012.000.121
+10.12.0.122,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF2,Secondary SCADA/View - Tapping Floor Humpy,200250066,010.012.000.122
+10.12.0.123,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF3,Maintenance Workstation - FWG Switchroom,200250087,010.012.000.123
+10.12.0.125,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF5,Operator Workstation - Top Control Room,200250095,010.012.000.125
+10.12.0.126,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF6,,,010.012.000.126
+10.12.0.127,Slag Fumer,iFIX Nodes & Ethernet Switches,POPPCSF7,Operator Workstation - Top Control Room,200250093,010.012.000.127
+10.12.0.128,Slag Fumer,iFIX Nodes & Ethernet Switches,Spare,,,010.012.000.128
+10.12.0.129,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF9,Operator Workstation - Tapping Floor Humpy,200250083,010.012.000.129
+10.12.0.130,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF10,Operator Workstation - Tapping Floor Humpy,200250086,010.012.000.130
+10.12.0.131,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF11,Control Room Alarms PC,200250113,010.012.000.131
+10.12.0.134,Slag Fumer,iFIX Nodes & Ethernet Switches,SFSW5,FWG SCADA Rack Ethernet Switch,,010.012.000.134
+10.12.0.135,Slag Fumer,iFIX Nodes & Ethernet Switches,SFSW4,Stack Fan EER Ethernet Swtich,,010.012.000.135
+10.12.0.137,Slag Fumer,iFIX Nodes & Ethernet Switches,SFSW4,Ethernet Switch (Process PLC switchroom) - Link to Power Plant,,010.012.000.137
+10.12.0.138,Slag Fumer,iFIX Nodes & Ethernet Switches,SFSW3,Ethernet Switch (Demag Blower RIO room),,010.012.000.138
+10.12.0.139,Slag Fumer,iFIX Nodes & Ethernet Switches,SFSW2,Ethernet Switch (Common PLC switchroom),,010.012.000.139
+10.12.0.140,Slag Fumer,iFIX Nodes & Ethernet Switches,SFSW1,Ethernet Switch,,010.012.000.140
+10.12.0.141,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP1,Primary SCADA ,200250069,010.012.000.141
+10.12.0.142,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP2,Secondary SCADA ,200250070,010.012.000.142
+10.12.0.143,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP3,Maintenance Workstation,200267933,010.012.000.143
+10.12.0.144,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP4,Operator Workstation,200267934,010.012.000.144
+10.12.0.145,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP5,Operator Workstation,"200,267,935",010.012.000.145
+10.12.0.146,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP6,Operator Workstation Lab,,010.012.000.146
+10.12.0.147,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.147
+10.12.0.148,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.148
+10.12.0.149,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.149
+10.12.0.150,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.150
+10.12.0.151,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.151
+10.12.0.152,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.152
+10.12.0.153,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.153
+10.12.0.154,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.154
+10.12.0.155,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.155
+10.12.0.156,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.156
+10.12.0.157,Copper Plant,iFIX Nodes & Ethernet Switches,,Engineering cisco Ethernet Process Switch,,010.012.000.157
+10.12.0.158,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.158
+10.12.0.159,Copper Plant,iFIX Nodes & Ethernet Switches,CPSW1,Copper Plant Cisco Ethernet Process Switch,,010.012.000.159
+10.12.0.161,Sinter Plant,iFIX Nodes & Ethernet Switches,PPPCSP1,Primary SCADA (Process Control LAN),200250075,010.012.000.161
+10.12.0.162,Sinter Plant,iFIX Nodes & Ethernet Switches,PPPCSP2,Secondary SCADA (Process Control LAN),200250076,010.012.000.162
+10.12.0.163,Sinter Plant,iFIX Nodes & Ethernet Switches,PPPCSP3,Maintenance Workstation,,010.012.000.163
+10.12.0.164,Sinter Plant,iFIX Nodes & Ethernet Switches,PPPCSP4,Operator Station - Proportioning Plant,200250110,010.012.000.164
+10.12.0.165,Sinter Plant,iFIX Nodes & Ethernet Switches,SPFPHMI,Filter Press Touch Screen HMI,,010.012.000.165
+10.12.0.166,Sinter Plant,iFIX Nodes & Ethernet Switches,PPPCCD1,Operator Station - Cadmium Plant,,010.012.000.166
+10.12.0.167,Sinter Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.167
+10.12.0.168,Sinter Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.168
+10.12.0.169,Sinter Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.169
+10.12.0.170,Sinter Plant,iFIX Nodes & Ethernet Switches,,S1 Laptop (Toshiba),,010.012.000.170
+10.12.0.171,Sinter Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.171
+10.12.0.172,Sinter Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.172
+10.12.0.173,Sinter Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.173
+10.12.0.174,Sinter Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.174
+10.12.0.175,Sinter Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.175
+10.12.0.176,Sinter Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.176
+10.12.0.177,Sinter Plant,iFIX Nodes & Ethernet Switches,SPFPSW,Diemme Filter Ethernet Switch,,010.012.000.177
+10.12.0.178,Sinter Plant,iFIX Nodes & Ethernet Switches,CSBSW1A/B,CSB Ethernet Switch,,010.012.000.178
+10.12.0.179,Sinter Plant,iFIX Nodes & Ethernet Switches,PRPSW,Proportioning Plant Ethernet Switch,,010.012.000.179
+10.12.0.180,Sinter Plant,iFIX Nodes & Ethernet Switches,SPSW1A/B,Sinter South Ethernet Switch,,010.012.000.180
+10.12.0.181,Refinery,iFIX Nodes & Ethernet Switches,PPPCRF1,Primary SCADA (PMR Switchroom),200170630,010.012.000.181
+10.12.0.182,Refinery,iFIX Nodes & Ethernet Switches,PPPCRF2,Secondary SCADA (KBA Switchroom),200170629,010.012.000.182
+10.12.0.183,Refinery,iFIX Nodes & Ethernet Switches,PPPCRF3,PMR Maintenance PC,200170625,010.012.000.183
+10.12.0.184,Refinery,iFIX Nodes & Ethernet Switches,PPPCRF4,Softener Retreat View Node,2001760626,010.012.000.184
+10.12.0.186,Refinery,iFIX Nodes & Ethernet Switches,PPPCRF6,KBA Retreat View Node,200170627,010.012.000.186
+10.12.0.189,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.189
+10.12.0.190,Refinery,iFIX Nodes & Ethernet Switches,PPPCRF10,Alloys Mtce PC,200170628,010.012.000.190
+10.12.0.192,Refinery,iFIX Nodes & Ethernet Switches,PPSPCSLM3,SLMM3 SCADA/View Node user               :administrator pass :deskpro,200250089,010.012.000.192
+10.12.0.194,Refinery,iFIX Nodes & Ethernet Switches,B_MOULD,"Butt Wheel SCADA/View Node
+user:BUTT WHEEL pass:deskpro",200250088,010.012.000.194
+10.12.0.195,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.195
+10.12.0.196,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.196
+10.12.0.197,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.197
+10.12.0.198,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.198
+10.12.0.199,Refinery,iFIX Nodes & Ethernet Switches,PMRSW1,PMR EER Ethernet Switch,,010.012.000.199
+10.12.0.200,Refinery,iFIX Nodes & Ethernet Switches,RFSW1,KBA Ethernet Switch - future,,010.012.000.200
+10.12.0.201,Kilns/KDR,iFIX Nodes & Ethernet Switches,PPPCKDR1,"Primary SCADA/Operator Workstation (Kilns)
+",200037176,010.012.000.201
+10.12.0.202,Kilns/KDR,iFIX Nodes & Ethernet Switches,PPPCKDR2,WWT Operator Workstation,200037177,010.012.000.202
+10.12.0.203,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.203
+10.12.0.204,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.204
+10.12.0.205,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.205
+10.12.0.206,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.206
+10.12.0.207,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.207
+10.12.0.208,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.208
+10.12.0.209,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.209
+10.12.0.210,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.210
+10.12.0.211,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.211
+10.12.0.212,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.212
+10.12.0.213,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.213
+10.12.0.214,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.214
+10.12.0.215,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.215
+10.12.0.216,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.216
+10.12.0.217,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.217
+10.12.0.218,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.218
+10.12.0.221,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.221
+10.12.0.222,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.222
+10.12.0.223,EAF Dust Washing,iFIX Nodes & Ethernet Switches,PPPCEAF3,EAF iFix Maintenance Node,200082982,010.012.000.223
+10.12.0.224,EAF Dust Washing,iFIX Nodes & Ethernet Switches,PPPCEAF4,EAF Operator Stations (Ex ZP4 machine),200177172,010.012.000.224
+10.12.0.225,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.225
+10.12.0.226,EAF Dust Washing,iFIX Nodes & Ethernet Switches,EAFHMI,Magellis Touch Screen,,010.012.000.226
+10.12.0.227,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.227
+10.12.0.228,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.228
+10.12.0.229,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.229
+10.12.0.230,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.230
+10.12.0.231,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.231
+10.12.0.232,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.232
+10.12.0.233,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.233
+10.12.0.234,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.234
+10.12.0.235,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.235
+10.12.0.236,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.236
+10.12.0.237,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.237
+10.12.0.238,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.238
+10.12.0.239,EAF Dust Washing,iFIX Nodes & Ethernet Switches,,,,010.012.000.239
+10.12.0.240,EAF Dust Washing,iFIX Nodes & Ethernet Switches,EAFSW1,,,010.012.000.240
+10.12.0.242,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCLTSH,Shift electrician laptop,,010.012.000.242
+10.12.0.243,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCLTRF,Refinery laptop,,010.012.000.243
+10.12.0.244,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCLTBF,Blast Furnace laptop,,010.012.000.244
+10.12.0.245,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCLTZP,Zinc Plant laptop,,010.012.000.245
+10.12.0.246,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCLTSP,Sinter Plant laptop,,010.012.000.246
+10.12.0.247,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCLTAP,Acid Plant laptop,,010.012.000.247
+10.12.0.248,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCLTSF,Slag Fuming laptop,,010.012.000.248
+10.12.0.249,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCLTEN1,Engineering laptop 1,,010.012.000.249
+10.12.0.250,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCLTEN2,Engineering laptop 2,,010.012.000.250
+10.12.0.251,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PP_FIX2,Klemmy's Fix32 machine,,010.012.000.251
+10.12.0.252,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PP_FIX3,Adrian's Fix 32 machine,,010.012.000.252
+10.12.0.253,Other ProcN Devices,iFIX Nodes & Ethernet Switches,ENG,Engineering iIFix version 5.5,,010.012.000.253
+10.12.0.255,Other ProcN Devices,iFIX Nodes & Ethernet Switches,,,,010.012.000.255
+10.12.1.21,Blast Furnace,PLCs & Control Equipment,BFPLC1,Blast Furnace Process PLC (Primary Rack),,010.012.001.021
+10.12.1.22,Blast Furnace,PLCs & Control Equipment,BFPLC2,Blast Furnace Process PLC (Secondary Rack),,010.012.001.022
+10.12.1.23,Blast Furnace,PLCs & Control Equipment,SRFPLC,SRF Quantum PLC,,010.012.001.023
+10.12.1.24,Blast Furnace,PLCs & Control Equipment,BFNCPLC,Blast Furnace North Cranes PLC,,010.012.001.024
+10.12.1.25,Blast Furnace,PLCs & Control Equipment,BFTPLC,Blast Furnace Top Floor PLC,,010.012.001.025
+10.12.1.26,Blast Furnace,PLCs & Control Equipment,BFSCPLC,Blast Furnace South Cranes PLC,,010.012.001.026
+10.12.1.27,Blast Furnace,PLCs & Control Equipment,,,,010.012.001.027
+10.12.1.28,Blast Furnace,PLCs & Control Equipment,,,,010.012.001.028
+10.12.1.29,Blast Furnace,PLCs & Control Equipment,,,,010.012.001.029
+10.12.1.30,Blast Furnace,PLCs & Control Equipment,,,,010.012.001.030
+10.12.1.31,Blast Furnace,PLCs & Control Equipment,,,,010.012.001.031
+10.12.1.32,Blast Furnace,PLCs & Control Equipment,,,,010.012.001.032
+10.12.1.33,Blast Furnace,PLCs & Control Equipment,EGX100,Modbus/Ethernet Bridge Sepams (BF sub),,010.012.001.033
+10.12.1.34,Blast Furnace,PLCs & Control Equipment,BFSthCraneElpro,,,010.012.001.034
+10.12.1.35,Blast Furnace,PLCs & Control Equipment,BFBridgeCrane,,,010.012.001.035
+10.12.1.36,Blast Furnace,PLCs & Control Equipment,BFBridgeSwitch,,,010.012.001.036
+10.12.1.37,Blast Furnace,PLCs & Control Equipment,BFMBE4,Modbus/Ethernet Bridge #1 (Meccano Set PLC),,010.012.001.037
+10.12.1.38,Blast Furnace,PLCs & Control Equipment,BFMBE3,Modbus/Ethernet Bridge #1 (Coke Scales PLC),,010.012.001.038
+10.12.1.39,Blast Furnace,PLCs & Control Equipment,BFMBE2,Modbus/Ethernet Bridge #2 (Power Meters & VFI),,010.012.001.039
+10.12.1.40,Blast Furnace,PLCs & Control Equipment,BFMBE1,Modbus/Ethernet Bridge #1 (ModMux),,010.012.001.040
+10.12.1.41,Acid Plant,PLCs & Control Equipment,APPLC1,Acid Plant Process PLC (Primary Rack),,010.012.001.041
+10.12.1.42,Acid Plant,PLCs & Control Equipment,APPLC2,Secondary Acid PLC (Secondary Rack),,010.012.001.042
+10.12.1.43,Acid Plant,PLCs & Control Equipment,SAPLC,Secondary Acid PLC,,010.012.001.043
+10.12.1.44,Acid Plant,PLCs & Control Equipment,,,,010.012.001.044
+10.12.1.45,Acid Plant,PLCs & Control Equipment,,,,010.012.001.045
+10.12.1.46,Acid Plant,PLCs & Control Equipment,,,,010.012.001.046
+10.12.1.47,Acid Plant,PLCs & Control Equipment,,,,010.012.001.047
+10.12.1.48,Acid Plant,PLCs & Control Equipment,,,,010.012.001.048
+10.12.1.49,Acid Plant,PLCs & Control Equipment,,,,010.012.001.049
+10.12.1.50,Acid Plant,PLCs & Control Equipment,,,,010.012.001.050
+10.12.1.51,Acid Plant,PLCs & Control Equipment,,,,010.012.001.051
+10.12.1.52,Acid Plant,PLCs & Control Equipment,,,,010.012.001.052
+10.12.1.53,Acid Plant,PLCs & Control Equipment,,,,010.012.001.053
+10.12.1.54,Acid Plant,PLCs & Control Equipment,,,,010.012.001.054
+10.12.1.55,Acid Plant,PLCs & Control Equipment,,,,010.012.001.055
+10.12.1.56,Acid Plant,PLCs & Control Equipment,,,,010.012.001.056
+10.12.1.57,Acid Plant,PLCs & Control Equipment,,,,010.012.001.057
+10.12.1.58,Acid Plant,PLCs & Control Equipment,,,,010.012.001.058
+10.12.1.59,Acid Plant,PLCs & Control Equipment,,,,010.012.001.059
+10.12.1.60,Acid Plant,PLCs & Control Equipment,PAMBPE1, MB+/Ethernet Bridge,,010.012.001.060
+10.12.1.61,PETs Plant,PLCs & Control Equipment,PET,PETs PLC,,010.012.001.061
+10.12.1.62,PETs Plant,PLCs & Control Equipment,,,,010.012.001.062
+10.12.1.63,PETs Plant,PLCs & Control Equipment,,,,010.012.001.063
+10.12.1.64,PETs Plant,PLCs & Control Equipment,,,,010.012.001.064
+10.12.1.65,PETs Plant,PLCs & Control Equipment,,,,010.012.001.065
+10.12.1.66,PETs Plant,PLCs & Control Equipment,,,,010.012.001.066
+10.12.1.67,PETs Plant,PLCs & Control Equipment,,,,010.012.001.067
+10.12.1.68,PETs Plant,PLCs & Control Equipment,,,,010.012.001.068
+10.12.1.69,PETs Plant,PLCs & Control Equipment,,,,010.012.001.069
+10.12.1.70,PETs Plant,PLCs & Control Equipment,,,,010.012.001.070
+10.12.1.71,PETs Plant,PLCs & Control Equipment,STP,STP PLC,,010.012.001.071
+10.12.1.72,PETs Plant,PLCs & Control Equipment,,PETS Elpro 945U-E,,010.012.001.072
+10.12.1.73,PETs Plant,PLCs & Control Equipment,,Sedimentation Basin Mouth Elpro 945U-E,,010.012.001.073
+10.12.1.74,PETs Plant,PLCs & Control Equipment,,Wooden Culvert South Elpro 945U-E,,010.012.001.074
+10.12.1.75,PETs Plant,PLCs & Control Equipment,,Pit Sump 1 Elpro 945U-E,,010.012.001.075
+10.12.1.76,PETs Plant,PLCs & Control Equipment,,Pit Sump 2 Elpro 945U-E,,010.012.001.076
+10.12.1.77,PETs Plant,PLCs & Control Equipment,,,,010.012.001.077
+10.12.1.78,PETs Plant,PLCs & Control Equipment,,,,010.012.001.078
+10.12.1.79,PETs Plant,PLCs & Control Equipment,EGX100,Modbus/Ethernet Bridge RO PLC,,010.012.001.079
+10.12.1.80,PETs Plant,PLCs & Control Equipment,EGX100,Modbus/Ethernet Bridge RO power meter,,010.012.001.080
+10.12.1.84,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.084
+10.12.1.85,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.085
+10.12.1.86,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.086
+10.12.1.87,Zinc Plant,PLCs & Control Equipment,ASiPLC,Test ASi PLC,,010.012.001.087
+10.12.1.91,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.091
+10.12.1.92,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.092
+10.12.1.93,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.093
+10.12.1.94,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.094
+10.12.1.95,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.095
+10.12.1.96,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.096
+10.12.1.97,Zinc Plant,PLCs & Control Equipment,,,,010.012.001.097
+10.12.1.102,Power Plant,PLCs & Control Equipment,PPPLC,Power Plant Blowers PLC,,010.012.001.102
+10.12.1.103,Power Plant,PLCs & Control Equipment,,,,010.012.001.103
+10.12.1.104,Power Plant,PLCs & Control Equipment,,,,010.012.001.104
+10.12.1.105,Power Plant,PLCs & Control Equipment,,,,010.012.001.105
+10.12.1.106,Power Plant,PLCs & Control Equipment,,,,010.012.001.106
+10.12.1.107,Power Plant,PLCs & Control Equipment,,,,010.012.001.107
+10.12.1.108,Power Plant,PLCs & Control Equipment,,,,010.012.001.108
+10.12.1.109,Power Plant,PLCs & Control Equipment,,,,010.012.001.109
+10.12.1.110,Power Plant,PLCs & Control Equipment,,,,010.012.001.110
+10.12.1.111,Power Plant,PLCs & Control Equipment,,,,010.012.001.111
+10.12.1.112,Power Plant,PLCs & Control Equipment,,,,010.012.001.112
+10.12.1.113,Power Plant,PLCs & Control Equipment,,,,010.012.001.113
+10.12.1.114,Power Plant,PLCs & Control Equipment,,,,010.012.001.114
+10.12.1.115,Power Plant,PLCs & Control Equipment,,,,010.012.001.115
+10.12.1.116,Power Plant,PLCs & Control Equipment,,,,010.012.001.116
+10.12.1.117,Power Plant,PLCs & Control Equipment,PPSW1,Power Plant Switch 1,,010.012.001.117
+10.12.1.121,Slag Fumer,PLCs & Control Equipment,SFPLC,Slag Fumer Process PLC,,010.012.001.121
+10.12.1.122,Slag Fumer,PLCs & Control Equipment,SFPLC2,Slag Fumer Process PLC (Redundant PLC),,010.012.001.122
+10.12.1.123,Slag Fumer,PLCs & Control Equipment,SFFWGPLC,Slag Fumer Fresh Water Granulation PLC,,010.012.001.123
+10.12.1.124,Slag Fumer,PLCs & Control Equipment,KBPPLC,Kiln Bagging Plant PLC M340,,010.012.001.124
+10.12.1.125,Slag Fumer,PLCs & Control Equipment,KBPSW1,Ethernet Cisco Switch(KBPEER),,010.012.001.125
+10.12.1.126,Slag Fumer,PLCs & Control Equipment,CCPLC,Charge Crane PLC M340,,010.012.001.126
+10.12.1.127,Slag Fumer,PLCs & Control Equipment,,,,010.012.001.127
+10.12.1.128,Slag Fumer,PLCs & Control Equipment,,,,010.012.001.128
+10.12.1.129,Slag Fumer,PLCs & Control Equipment,,,,010.012.001.129
+10.12.1.130,Slag Fumer,PLCs & Control Equipment,SFFWGUPS,FWG SCADA Rack UPS,,010.012.001.130
+10.12.1.131,Slag Fumer,PLCs & Control Equipment,,,,010.012.001.131
+10.12.1.132,Slag Fumer,PLCs & Control Equipment,,,,010.012.001.132
+10.12.1.133,Slag Fumer,PLCs & Control Equipment,,,,010.012.001.133
+10.12.1.134,Slag Fumer,PLCs & Control Equipment,PPPCSF14,Operator Workstation - Top Control Room (iFix),200250112,010.012.001.134
+10.12.1.135,Slag Fumer,PLCs & Control Equipment,PPPCSF15,Operator Workstation - Tapping Floor Humpy (iFix),200177173,010.012.001.135
+10.12.1.136,Slag Fumer,PLCs & Control Equipment,,Charge Crane Access Point Elpro Radio (Common PLC Room),,010.012.001.136
+10.12.1.137,Slag Fumer,PLCs & Control Equipment,,Charge Crane Elpro Radio (on Crane),,010.012.001.137
+10.12.1.138,Slag Fumer,PLCs & Control Equipment,SFMBPE3,3.3Rm MB+/Ethernet Gateway (SF2s MBEII),,010.012.001.138
+10.12.1.139,Slag Fumer,PLCs & Control Equipment,SFMBPE2,FWG MB+/Ethernet Gateway (SF1s MBEII),,010.012.001.139
+10.12.1.141,Copper Plant,PLCs & Control Equipment,CPPPLC,Copper Process PLC,,010.012.001.141
+10.12.1.142,Copper Plant,PLCs & Control Equipment,COPPERPLC,Copper Ladder PLC,,010.012.001.142
+10.12.1.143,Copper Plant,PLCs & Control Equipment,,,,010.012.001.143
+10.12.1.144,Copper Plant,PLCs & Control Equipment,,,,010.012.001.144
+10.12.1.145,Copper Plant,PLCs & Control Equipment,,,,010.012.001.145
+10.12.1.146,Copper Plant,PLCs & Control Equipment,,,,010.012.001.146
+10.12.1.147,Copper Plant,PLCs & Control Equipment,,,,010.012.001.147
+10.12.1.148,Copper Plant,PLCs & Control Equipment,,,,010.012.001.148
+10.12.1.149,Copper Plant,PLCs & Control Equipment,,,,010.012.001.149
+10.12.1.150,Copper Plant,PLCs & Control Equipment,,,,010.012.001.150
+10.12.1.151,Copper Plant,PLCs & Control Equipment,,,,010.012.001.151
+10.12.1.152,Copper Plant,PLCs & Control Equipment,,,,010.012.001.152
+10.12.1.153,Copper Plant,PLCs & Control Equipment,,,,010.012.001.153
+10.12.1.154,Copper Plant,PLCs & Control Equipment,,,,010.012.001.154
+10.12.1.155,Copper Plant,PLCs & Control Equipment,,,,010.012.001.155
+10.12.1.156,Copper Plant,PLCs & Control Equipment,Elpro 945UE,Council RO tank Wireless RS485,,010.012.001.156
+10.12.1.157,Copper Plant,PLCs & Control Equipment,Elpro 945UE,ETSA Monitoring Wireless RS485 ,,010.012.001.157
+10.12.1.158,Copper Plant,PLCs & Control Equipment,Elpro 945UE,ETSA Monitoring Wireless Gateway ,,010.012.001.158
+10.12.1.159,Copper Plant,PLCs & Control Equipment,EGX100,Modbus/Ethernet Bridge Sepams,,010.012.001.159
+10.12.1.160,Copper Plant,PLCs & Control Equipment,,,,010.012.001.160
+10.12.1.161,Sinter Plant,PLCs & Control Equipment,SPPLC1,Sinter Process PLC (Primary Rack),,010.012.001.161
+10.12.1.162,Sinter Plant,PLCs & Control Equipment,SPPLC2,Sinter Process PLC (Secondary Rack),,010.012.001.162
+10.12.1.163,Sinter Plant,PLCs & Control Equipment,CBSPPLC,CSB Process PLC,,010.012.001.163
+10.12.1.164,Sinter Plant,PLCs & Control Equipment,CDPLC,Cadmium Plant PLC,,010.012.001.164
+10.12.1.165,Sinter Plant,PLCs & Control Equipment,SPFPPLC,Diemme Filter Press PLC,,010.012.001.165
+10.12.1.166,Sinter Plant,PLCs & Control Equipment,SPSTPLC,Baghouse Slurry Transfer PLC,,010.012.001.166
+10.12.1.167,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.167
+10.12.1.168,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.168
+10.12.1.169,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.169
+10.12.1.170,Sinter Plant,PLCs & Control Equipment,SPMBE1,Modbus/Ethernet Bridge (Sinter South P1154),,010.012.001.170
+10.12.1.171,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.171
+10.12.1.172,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.172
+10.12.1.173,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.173
+10.12.1.174,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.174
+10.12.1.175,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.175
+10.12.1.176,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.176
+10.12.1.177,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.177
+10.12.1.178,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.178
+10.12.1.179,Sinter Plant,PLCs & Control Equipment,,,,010.012.001.179
+10.12.1.180,Sinter Plant,PLCs & Control Equipment,SPMBPE1,MB+/Ethernet Bridge,,010.012.001.180
+10.12.1.182,Refinery,PLCs & Control Equipment,PMRPLC,PMR PLC,,010.012.001.182
+10.12.1.183,Refinery,PLCs & Control Equipment,BATCHPLC,Batch PLC,,010.012.001.183
+10.12.1.184,Refinery,PLCs & Control Equipment,,,,010.012.001.184
+10.12.1.185,Refinery,PLCs & Control Equipment,,,,010.012.001.185
+10.12.1.186,Refinery,PLCs & Control Equipment,,,,010.012.001.186
+10.12.1.187,Refinery,PLCs & Control Equipment,,,,010.012.001.187
+10.12.1.188,Refinery,PLCs & Control Equipment,,#1 VIR PLC,,010.012.001.188
+10.12.1.189,Refinery,PLCs & Control Equipment,,#2 VIR PLC,,010.012.001.189
+10.12.1.190,Refinery,PLCs & Control Equipment,,,,010.012.001.190
+10.12.1.191,Refinery,PLCs & Control Equipment,,,,010.012.001.191
+10.12.1.192,Refinery,PLCs & Control Equipment,,Ship Unloader RS232 Terminal Server,,010.012.001.192
+10.12.1.193,Refinery,PLCs & Control Equipment,,Elpro Test,,010.012.001.193
+10.12.1.194,Refinery,PLCs & Control Equipment,PPPCSHIP,Ship Unloader PC,,010.012.001.194
+10.12.1.195,Refinery,PLCs & Control Equipment,Elpro 945UE,Ship Unloader Wireless Bridge (Unloader),,010.012.001.195
+10.12.1.196,Refinery,PLCs & Control Equipment,Elpro 945UE,Ship Unloader Wireless Bridge (PMR),,010.012.001.196
+10.12.1.197,Refinery,PLCs & Control Equipment,RFMBPE3,PRM MB+/Ethernet Gateway (RF2s MBEII),,010.012.001.197
+10.12.1.198,Refinery,PLCs & Control Equipment,RFMBPE2,PMR MB+/Ethernet Gateway (RF1s MBEII),,010.012.001.198
+10.12.1.199,Refinery,PLCs & Control Equipment,PMREGX1,PMR EGX Gateway,,010.012.001.199
+10.12.1.201,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.201
+10.12.1.202,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.202
+10.12.1.203,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.203
+10.12.1.204,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.204
+10.12.1.205,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.205
+10.12.1.206,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.206
+10.12.1.207,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.207
+10.12.1.208,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.208
+10.12.1.209,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.209
+10.12.1.210,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.210
+10.12.1.211,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.211
+10.12.1.212,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.212
+10.12.1.213,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.213
+10.12.1.214,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.214
+10.12.1.215,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.215
+10.12.1.216,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.216
+10.12.1.217,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.217
+10.12.1.218,Kilns/KDR,PLCs & Control Equipment,,,,010.012.001.218
+10.12.1.219,Kilns/KDR,PLCs & Control Equipment,KDRMBPE1,KDRWW MB+/Ethernet Gateway (KILNs MBEI),,010.012.001.219
+10.12.1.221,EAF Dust Washing,PLCs & Control Equipment,EAFPLC,EAF Process PLC,,010.012.001.221
+10.12.1.222,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.222
+10.12.1.223,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.223
+10.12.1.224,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.224
+10.12.1.225,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.225
+10.12.1.226,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.226
+10.12.1.227,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.227
+10.12.1.228,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.228
+10.12.1.229,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.229
+10.12.1.230,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.230
+10.12.1.231,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.231
+10.12.1.232,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.232
+10.12.1.233,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.233
+10.12.1.234,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.234
+10.12.1.235,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.235
+10.12.1.236,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.236
+10.12.1.237,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.237
+10.12.1.238,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.238
+10.12.1.239,EAF Dust Washing,PLCs & Control Equipment,,,,010.012.001.239
+10.12.1.240,EAF Dust Washing,PLCs & Control Equipment,,EAF Modbus/Ethernet Bridge (EGX100),,010.012.001.240
+10.12.1.241,Other ProcN Devices,PLCs & Control Equipment,PPPCHIST1,,,010.012.001.241
+10.12.1.242,Other ProcN Devices,PLCs & Control Equipment,PPPCHIST2,,,010.012.001.242
+10.12.1.243,Other ProcN Devices,PLCs & Control Equipment,PPPCWEB,,,010.012.001.243
+10.12.1.244,Other ProcN Devices,PLCs & Control Equipment,,Ethernet Cisco Switch (Spare in E&I),,010.012.001.244
+10.12.1.245,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.245
+10.12.1.246,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.246
+10.12.1.247,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.247
+10.12.1.248,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.248
+10.12.1.249,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.249
+10.12.1.250,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.250
+10.12.1.251,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.251
+10.12.1.252,Other ProcN Devices,PLCs & Control Equipment,,PETS Water Analyser,,010.012.001.252
+10.12.1.253,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.253
+10.12.1.254,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.254
+10.12.1.255,Other ProcN Devices,PLCs & Control Equipment,,,,010.012.001.255
+10.12.2.1,Spare Plant Area,iFIX Nodes & Ethernet Switches,PPPCIFIX1,New windows7 Spare PC,,010.012.002.001
+10.12.2.2,Spare Plant Area,iFIX Nodes & Ethernet Switches,PPPCIFIX2,New windows7 Spare PC,,010.012.002.002
+10.12.2.3,Spare Plant Area,iFIX Nodes & Ethernet Switches,PPPCIFIX3,New windows7 Spare PC,,010.012.002.003
+10.12.2.4,Spare Plant Area,iFIX Nodes & Ethernet Switches,WAN Testing,Given to Jhonny Guzman for WAN testing,,010.012.002.004
+10.12.2.5,Spare Plant Area,iFIX Nodes & Ethernet Switches,WAN Testing,Given to Jhonny Guzman for WAN testing,,010.012.002.005
+10.12.2.6,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.006
+10.12.2.7,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.007
+10.12.2.8,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.008
+10.12.2.9,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.009
+10.12.2.10,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.010
+10.12.2.11,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.011
+10.12.2.12,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.012
+10.12.2.13,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.013
+10.12.2.14,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.014
+10.12.2.15,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.015
+10.12.2.16,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.016
+10.12.2.17,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.017
+10.12.2.18,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.018
+10.12.2.19,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.019
+10.12.2.20,Spare Plant Area,iFIX Nodes & Ethernet Switches,,,,010.012.002.020
+10.12.3.1,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.001
+10.12.3.2,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.002
+10.12.3.3,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.003
+10.12.3.4,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.004
+10.12.3.5,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.005
+10.12.3.6,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.006
+10.12.3.7,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.007
+10.12.3.8,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.008
+10.12.3.9,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.009
+10.12.3.10,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.010
+10.12.3.11,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.011
+10.12.3.12,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.012
+10.12.3.13,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.013
+10.12.3.14,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.014
+10.12.3.15,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.015
+10.12.3.16,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.016
+10.12.3.17,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.017
+10.12.3.18,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.018
+10.12.3.19,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.019
+10.12.3.20,Spare Plant Area,PLCs & Control Equipment,,,,010.012.003.020
+10.12.11.1,Fume Control,Motor Control Equipment,FC-F3A,F3A VSD,,010.012.011.001
+10.12.11.2,Fume Control,Motor Control Equipment,FC-F3B,F3B VSD,,010.012.011.002
+10.12.11.3,Fume Control,Motor Control Equipment,,,,010.012.011.003
+10.12.11.4,Fume Control,Motor Control Equipment,,,,010.012.011.004
+10.12.11.5,Fume Control,Motor Control Equipment,,,,010.012.011.005
+10.12.11.6,Fume Control,Motor Control Equipment,,,,010.012.011.006
+10.12.11.7,Fume Control,Motor Control Equipment,,,,010.012.011.007
+10.12.11.8,Fume Control,Motor Control Equipment,,,,010.012.011.008
+10.12.11.9,Fume Control,Motor Control Equipment,,,,010.012.011.009
+10.12.11.10,Fume Control,Motor Control Equipment,,,,010.012.011.010
+10.12.11.11,Fume Control,Motor Control Equipment,,,,010.012.011.011
+10.12.11.12,Fume Control,Motor Control Equipment,,,,010.012.011.012
+10.12.11.13,Fume Control,Motor Control Equipment,,,,010.012.011.013
+10.12.11.14,Fume Control,Motor Control Equipment,,,,010.012.011.014
+10.12.11.15,Fume Control,Motor Control Equipment,,,,010.012.011.015
+10.12.11.16,Fume Control,Motor Control Equipment,,,,010.012.011.016
+10.12.11.17,Fume Control,Motor Control Equipment,,F3B EGX100 gateway (Power Meter),,010.012.011.017
+10.12.11.18,Fume Control,Motor Control Equipment,,F3B Sepam,,010.012.011.018
+10.12.11.19,Fume Control,Motor Control Equipment,,F3A EGX100 gateway (Power Meter),,010.012.011.019
+10.12.11.20,Fume Control,Motor Control Equipment,,F3A Sepam,,010.012.011.020
+10.12.12.1,Blast Furnace,Motor Control Equipment,,,,010.012.012.001
+10.12.12.2,Blast Furnace,Motor Control Equipment,,,,010.012.012.002
+10.12.12.3,Blast Furnace,Motor Control Equipment,,,,010.012.012.003
+10.12.12.4,Blast Furnace,Motor Control Equipment,,,,010.012.012.004
+10.12.12.5,Blast Furnace,Motor Control Equipment,,,,010.012.012.005
+10.12.12.6,Blast Furnace,Motor Control Equipment,,,,010.012.012.006
+10.12.12.7,Blast Furnace,Motor Control Equipment,,,,010.012.012.007
+10.12.12.8,Blast Furnace,Motor Control Equipment,,,,010.012.012.008
+10.12.12.9,Blast Furnace,Motor Control Equipment,,,,010.012.012.009
+10.12.12.10,Blast Furnace,Motor Control Equipment,,,,010.012.012.010
+10.12.12.11,Blast Furnace,Motor Control Equipment,,,,010.012.012.011
+10.12.12.12,Blast Furnace,Motor Control Equipment,,,,010.012.012.012
+10.12.12.13,Blast Furnace,Motor Control Equipment,,,,010.012.012.013
+10.12.12.14,Blast Furnace,Motor Control Equipment,,,,010.012.012.014
+10.12.12.15,Blast Furnace,Motor Control Equipment,,,,010.012.012.015
+10.12.12.16,Blast Furnace,Motor Control Equipment,,,,010.012.012.016
+10.12.12.17,Blast Furnace,Motor Control Equipment,,,,010.012.012.017
+10.12.12.18,Blast Furnace,Motor Control Equipment,,,,010.012.012.018
+10.12.12.19,Blast Furnace,Motor Control Equipment,,,,010.012.012.019
+10.12.12.20,Blast Furnace,Motor Control Equipment,,,,010.012.012.020
+10.12.13.1,Acid Plant,Motor Control Equipment,AP-M003,Altivar71 VSD - Sea Water Pump A,,010.012.013.001
+10.12.13.2,Acid Plant,Motor Control Equipment,AP-M004,Altivar71 VSD - Sea Water Pump B,,010.012.013.002
+10.12.13.3,Acid Plant,Motor Control Equipment,,,,010.012.013.003
+10.12.13.4,Acid Plant,Motor Control Equipment,,,,010.012.013.004
+10.12.13.5,Acid Plant,Motor Control Equipment,,,,010.012.013.005
+10.12.13.6,Acid Plant,Motor Control Equipment,,,,010.012.013.006
+10.12.13.7,Acid Plant,Motor Control Equipment,,,,010.012.013.007
+10.12.13.8,Acid Plant,Motor Control Equipment,,,,010.012.013.008
+10.12.13.9,Acid Plant,Motor Control Equipment,,,,010.012.013.009
+10.12.13.10,Acid Plant,Motor Control Equipment,,,,010.012.013.010
+10.12.13.11,Acid Plant,Motor Control Equipment,,,,010.012.013.011
+10.12.13.12,Acid Plant,Motor Control Equipment,,,,010.012.013.012
+10.12.13.13,Acid Plant,Motor Control Equipment,,,,010.012.013.013
+10.12.13.14,Acid Plant,Motor Control Equipment,,,,010.012.013.014
+10.12.13.15,Acid Plant,Motor Control Equipment,,,,010.012.013.015
+10.12.13.16,Acid Plant,Motor Control Equipment,,,,010.012.013.016
+10.12.13.17,Acid Plant,Motor Control Equipment,,,,010.012.013.017
+10.12.13.18,Acid Plant,Motor Control Equipment,,,,010.012.013.018
+10.12.13.19,Acid Plant,Motor Control Equipment,,,,010.012.013.019
+10.12.13.20,Acid Plant,Motor Control Equipment,,,,010.012.013.020
+10.12.13.20,Acid Plant,Motor Control Equipment,,,,010.012.013.020
+10.12.14.1,PETs Plant,Motor Control Equipment,RV-A1001,Lime Plant Rotary Valve VSD,,010.012.014.001
+10.12.14.2,PETs Plant,Motor Control Equipment,BM-A1002,Lime Plant Ball Mill Soft Starter,,010.012.014.002
+10.12.14.3,PETs Plant,Motor Control Equipment,PU-A1003,Lime Plant Mill Discharge Pump VSD,,010.012.014.003
+10.12.14.4,PETs Plant,Motor Control Equipment,,,,010.012.014.004
+10.12.14.5,PETs Plant,Motor Control Equipment,,,,010.012.014.005
+10.12.14.6,PETs Plant,Motor Control Equipment,,,,010.012.014.006
+10.12.14.7,PETs Plant,Motor Control Equipment,,,,010.012.014.007
+10.12.14.8,PETs Plant,Motor Control Equipment,,,,010.012.014.008
+10.12.14.9,PETs Plant,Motor Control Equipment,,,,010.012.014.009
+10.12.14.10,PETs Plant,Motor Control Equipment,,,,010.012.014.010
+10.12.14.11,PETs Plant,Motor Control Equipment,,,,010.012.014.011
+10.12.14.12,PETs Plant,Motor Control Equipment,,,,010.012.014.012
+10.12.14.13,PETs Plant,Motor Control Equipment,,,,010.012.014.013
+10.12.14.14,PETs Plant,Motor Control Equipment,,,,010.012.014.014
+10.12.14.15,PETs Plant,Motor Control Equipment,,,,010.012.014.015
+10.12.14.16,PETs Plant,Motor Control Equipment,,,,010.012.014.016
+10.12.14.17,PETs Plant,Motor Control Equipment,,,,010.012.014.017
+10.12.14.18,PETs Plant,Motor Control Equipment,,,,010.012.014.018
+10.12.14.19,PETs Plant,Motor Control Equipment,,,,010.012.014.019
+10.12.14.20,PETs Plant,Motor Control Equipment,,,,010.012.014.020
+10.12.15.1,Zinc Plant,Motor Control Equipment,,,,010.012.015.001
+10.12.15.2,Zinc Plant,Motor Control Equipment,,,,010.012.015.002
+10.12.15.3,Zinc Plant,Motor Control Equipment,,,,010.012.015.003
+10.12.15.4,Zinc Plant,Motor Control Equipment,,,,010.012.015.004
+10.12.15.5,Zinc Plant,Motor Control Equipment,,,,010.012.015.005
+10.12.15.6,Zinc Plant,Motor Control Equipment,,,,010.012.015.006
+10.12.15.7,Zinc Plant,Motor Control Equipment,,,,010.012.015.007
+10.12.15.8,Zinc Plant,Motor Control Equipment,,,,010.012.015.008
+10.12.15.9,Zinc Plant,Motor Control Equipment,,,,010.012.015.009
+10.12.15.10,Zinc Plant,Motor Control Equipment,,,,010.012.015.010
+10.12.15.11,Zinc Plant,Motor Control Equipment,,,,010.012.015.011
+10.12.15.12,Zinc Plant,Motor Control Equipment,,,,010.012.015.012
+10.12.15.13,Zinc Plant,Motor Control Equipment,,,,010.012.015.013
+10.12.15.14,Zinc Plant,Motor Control Equipment,,,,010.012.015.014
+10.12.15.15,Zinc Plant,Motor Control Equipment,,,,010.012.015.015
+10.12.15.16,Zinc Plant,Motor Control Equipment,,,,010.012.015.016
+10.12.15.17,Zinc Plant,Motor Control Equipment,,,,010.012.015.017
+10.12.15.18,Zinc Plant,Motor Control Equipment,,,,010.012.015.018
+10.12.15.19,Zinc Plant,Motor Control Equipment,,,,010.012.015.019
+10.12.15.20,Zinc Plant,Motor Control Equipment,,,,010.012.015.020
+10.12.16.1,Power Plant,Motor Control Equipment,Blower #4,,,010.012.016.001
+10.12.16.2,Power Plant,Motor Control Equipment,,,,010.012.016.002
+10.12.16.3,Power Plant,Motor Control Equipment,,,,010.012.016.003
+10.12.16.4,Power Plant,Motor Control Equipment,,,,010.012.016.004
+10.12.16.5,Power Plant,Motor Control Equipment,,,,010.012.016.005
+10.12.16.6,Power Plant,Motor Control Equipment,,,,010.012.016.006
+10.12.16.7,Power Plant,Motor Control Equipment,,,,010.012.016.007
+10.12.16.8,Power Plant,Motor Control Equipment,,,,010.012.016.008
+10.12.16.9,Power Plant,Motor Control Equipment,,,,010.012.016.009
+10.12.16.10,Power Plant,Motor Control Equipment,,,,010.012.016.010
+10.12.16.11,Power Plant,Motor Control Equipment,,,,010.012.016.011
+10.12.16.12,Power Plant,Motor Control Equipment,,,,010.012.016.012
+10.12.16.13,Power Plant,Motor Control Equipment,,,,010.012.016.013
+10.12.16.14,Power Plant,Motor Control Equipment,,,,010.012.016.014
+10.12.16.15,Power Plant,Motor Control Equipment,,,,010.012.016.015
+10.12.16.16,Power Plant,Motor Control Equipment,,,,010.012.016.016
+10.12.16.17,Power Plant,Motor Control Equipment,,,,010.012.016.017
+10.12.16.18,Power Plant,Motor Control Equipment,,,,010.012.016.018
+10.12.16.19,Power Plant,Motor Control Equipment,,,,010.012.016.019
+10.12.16.20,Power Plant,Motor Control Equipment,,,,010.012.016.020
+10.12.17.1,Slag Fumer,Motor Control Equipment,SF-M369,Altivar71 VSD - Rotafeed 1 Feeder 1,,010.012.017.001
+10.12.17.2,Slag Fumer,Motor Control Equipment,SF-M370,Altivar71 VSD - Rotafeed 1 Feeder 2,,010.012.017.002
+10.12.17.3,Slag Fumer,Motor Control Equipment,SF-M371,Altivar71 VSD - Rotafeed 1 Feeder 3,,010.012.017.003
+10.12.17.4,Slag Fumer,Motor Control Equipment,SF-M372,Altivar71 VSD - Rotafeed 1 Feeder 4,,010.012.017.004
+10.12.17.5,Slag Fumer,Motor Control Equipment,SF-M373,Altivar71 VSD - Rotafeed 1 Feeder 5,,010.012.017.005
+10.12.17.6,Slag Fumer,Motor Control Equipment,SF-M374,Altivar71 VSD - Rotafeed 1 Feeder 6,,010.012.017.006
+10.12.17.7,Slag Fumer,Motor Control Equipment,SF-M375,Altivar71 VSD - Rotafeed 2 Feeder 1,,010.012.017.007
+10.12.17.8,Slag Fumer,Motor Control Equipment,SF-M376,Altivar71 VSD - Rotafeed 2 Feeder 2,,010.012.017.008
+10.12.17.9,Slag Fumer,Motor Control Equipment,SF-M377,Altivar71 VSD - Rotafeed 2 Feeder 3,,010.012.017.009
+10.12.17.10,Slag Fumer,Motor Control Equipment,SF-M378,Altivar71 VSD - Rotafeed 2 Feeder 4,,010.012.017.010
+10.12.17.11,Slag Fumer,Motor Control Equipment,SF-M379,Altivar71 VSD - Rotafeed 2 Feeder 5,,010.012.017.011
+10.12.17.12,Slag Fumer,Motor Control Equipment,SF-M380,Altivar71 VSD - Rotafeed 2 Feeder 6,,010.012.017.012
+10.12.17.13,Slag Fumer,Motor Control Equipment,,Stack Fan EER EGX-100 gateway,,010.012.017.013
+10.12.17.14,Slag Fumer,Motor Control Equipment,,Stack Fan VSD,,010.012.017.014
+10.12.17.15,Slag Fumer,Motor Control Equipment,,FWG Modbus/Ethernet Gateway Sepams/ABB,,010.012.017.015
+10.12.17.16,Slag Fumer,Motor Control Equipment,SF-DDCSE1,VSD DDCS/Ethernet Converter,,010.012.017.016
+10.12.17.17,Slag Fumer,Motor Control Equipment,SF-RS485E1,VSD RS485/Ethernet Gateway (EGX100),,010.012.017.017
+10.12.17.18,Slag Fumer,Motor Control Equipment,SF-RS485E2,Sepam RS485/Ethernet Gateway (EGX100),,010.012.017.018
+10.12.17.19,Slag Fumer,Motor Control Equipment,SF-RS485E3,HV Sepam RS485/Ethernet Gateway (EGX100),,010.012.017.019
+10.12.17.20,Slag Fumer,Motor Control Equipment,SF-RS485E4,HV Sepam RS485/Ethernet Gateway (EGX100),,010.012.017.020
+10.12.17.21,Slag Fumer,Motor Control Equipment,,FWG Modbus/Ethernet Gateway Power meters,,010.012.017.021
+10.12.17.22,Slag Fumer,Motor Control Equipment,KBP-M396,Kilin Bagging Plant VSD-341 Conv,,010.012.017.022
+10.12.17.23,Slag Fumer,Motor Control Equipment,M071-VSD,Coal Ball Mill VSD,,010.012.017.023
+10.12.18.1,Copper Plant,Motor Control Equipment,CP-P13,Altivar 71 - 21A Repulp Reactor Agitator,,010.012.018.001
+10.12.18.2,Copper Plant,Motor Control Equipment,,,,010.012.018.002
+10.12.18.3,Copper Plant,Motor Control Equipment,,,,010.012.018.003
+10.12.18.4,Copper Plant,Motor Control Equipment,,,,010.012.018.004
+10.12.18.5,Copper Plant,Motor Control Equipment,,,,010.012.018.005
+10.12.18.6,Copper Plant,Motor Control Equipment,,,,010.012.018.006
+10.12.18.7,Copper Plant,Motor Control Equipment,,,,010.012.018.007
+10.12.18.8,Copper Plant,Motor Control Equipment,,,,010.012.018.008
+10.12.18.9,Copper Plant,Motor Control Equipment,,,,010.012.018.009
+10.12.18.10,Copper Plant,Motor Control Equipment,,,,010.012.018.010
+10.12.18.11,Copper Plant,Motor Control Equipment,,,,010.012.018.011
+10.12.18.12,Copper Plant,Motor Control Equipment,,,,010.012.018.012
+10.12.18.13,Copper Plant,Motor Control Equipment,,,,010.012.018.013
+10.12.18.14,Copper Plant,Motor Control Equipment,,,,010.012.018.014
+10.12.18.15,Copper Plant,Motor Control Equipment,,,,010.012.018.015
+10.12.18.16,Copper Plant,Motor Control Equipment,,,,010.012.018.016
+10.12.18.17,Copper Plant,Motor Control Equipment,,,,010.012.018.017
+10.12.18.18,Copper Plant,Motor Control Equipment,,,,010.012.018.018
+10.12.18.19,Copper Plant,Motor Control Equipment,,,,010.012.018.019
+10.12.18.20,Copper Plant,Motor Control Equipment,,,,010.012.018.020
+10.12.19.1,Sinter Plant,Motor Control Equipment,M2613,Diemme filter VSD ??????,,010.012.019.001
+10.12.19.2,Sinter Plant,Motor Control Equipment,M2626,Diemme filter VSD ??????,,010.012.019.002
+10.12.19.3,Sinter Plant,Motor Control Equipment,M2633,Diemme filter VSD ??????,,010.012.019.003
+10.12.19.4,Sinter Plant,Motor Control Equipment,M2641,Diemme filter VSD ??????,,010.012.019.004
+10.12.19.5,Sinter Plant,Motor Control Equipment,M2647,Diemme filter VSD ??????,,010.012.019.005
+10.12.19.6,Sinter Plant,Motor Control Equipment,,,,010.012.019.006
+10.12.19.7,Sinter Plant,Motor Control Equipment,,,,010.012.019.007
+10.12.19.8,Sinter Plant,Motor Control Equipment,,,,010.012.019.008
+10.12.19.9,Sinter Plant,Motor Control Equipment,,,,010.012.019.009
+10.12.19.10,Sinter Plant,Motor Control Equipment,,,,010.012.019.010
+10.12.19.11,Sinter Plant,Motor Control Equipment,,,,010.012.019.011
+10.12.19.12,Sinter Plant,Motor Control Equipment,,,,010.012.019.012
+10.12.19.13,Sinter Plant,Motor Control Equipment,,,,010.012.019.013
+10.12.19.14,Sinter Plant,Motor Control Equipment,,,,010.012.019.014
+10.12.19.15,Sinter Plant,Motor Control Equipment,,,,010.012.019.015
+10.12.19.16,Sinter Plant,Motor Control Equipment,,,,010.012.019.016
+10.12.19.17,Sinter Plant,Motor Control Equipment,,,,010.012.019.017
+10.12.19.18,Sinter Plant,Motor Control Equipment,,,,010.012.019.018
+10.12.19.19,Sinter Plant,Motor Control Equipment,,,,010.012.019.019
+10.12.19.20,Sinter Plant,Motor Control Equipment,,,,010.012.019.020
+10.12.20.1,Refinery,Motor Control Equipment,,VIR #1 Rotary Table VSD,,010.012.020.001
+10.12.20.2,Refinery,Motor Control Equipment,,VIR #2 Rotary Table VSD,,010.012.020.002
+10.12.20.3,Refinery,Motor Control Equipment,,,,010.012.020.003
+10.12.20.4,Refinery,Motor Control Equipment,,,,010.012.020.004
+10.12.20.5,Refinery,Motor Control Equipment,,,,010.012.020.005
+10.12.20.6,Refinery,Motor Control Equipment,,,,010.012.020.006
+10.12.20.7,Refinery,Motor Control Equipment,,,,010.012.020.007
+10.12.20.8,Refinery,Motor Control Equipment,,,,010.012.020.008
+10.12.20.9,Refinery,Motor Control Equipment,,,,010.012.020.009
+10.12.20.10,Refinery,Motor Control Equipment,,,,010.012.020.010
+10.12.20.11,Refinery,Motor Control Equipment,,,,010.012.020.011
+10.12.20.12,Refinery,Motor Control Equipment,,,,010.012.020.012
+10.12.20.13,Refinery,Motor Control Equipment,,,,010.012.020.013
+10.12.20.14,Refinery,Motor Control Equipment,,,,010.012.020.014
+10.12.20.15,Refinery,Motor Control Equipment,,,,010.012.020.015
+10.12.20.16,Refinery,Motor Control Equipment,,,,010.012.020.016
+10.12.20.17,Refinery,Motor Control Equipment,,,,010.012.020.017
+10.12.20.18,Refinery,Motor Control Equipment,,,,010.012.020.018
+10.12.20.19,Refinery,Motor Control Equipment,,,,010.012.020.019
+10.12.20.20,Refinery,Motor Control Equipment,,,,010.012.020.020
+10.12.21.1,Kilns/KDR,Motor Control Equipment,,,,010.012.021.001
+10.12.21.2,Kilns/KDR,Motor Control Equipment,,,,010.012.021.002
+10.12.21.3,Kilns/KDR,Motor Control Equipment,,,,010.012.021.003
+10.12.21.4,Kilns/KDR,Motor Control Equipment,,,,010.012.021.004
+10.12.21.5,Kilns/KDR,Motor Control Equipment,,,,010.012.021.005
+10.12.21.6,Kilns/KDR,Motor Control Equipment,,,,010.012.021.006
+10.12.21.7,Kilns/KDR,Motor Control Equipment,,,,010.012.021.007
+10.12.21.8,Kilns/KDR,Motor Control Equipment,,,,010.012.021.008
+10.12.21.9,Kilns/KDR,Motor Control Equipment,,,,010.012.021.009
+10.12.21.10,Kilns/KDR,Motor Control Equipment,,,,010.012.021.010
+10.12.21.11,Kilns/KDR,Motor Control Equipment,,,,010.012.021.011
+10.12.21.12,Kilns/KDR,Motor Control Equipment,,,,010.012.021.012
+10.12.21.13,Kilns/KDR,Motor Control Equipment,,,,010.012.021.013
+10.12.21.14,Kilns/KDR,Motor Control Equipment,,,,010.012.021.014
+10.12.21.15,Kilns/KDR,Motor Control Equipment,,,,010.012.021.015
+10.12.21.16,Kilns/KDR,Motor Control Equipment,,,,010.012.021.016
+10.12.21.17,Kilns/KDR,Motor Control Equipment,,,,010.012.021.017
+10.12.21.18,Kilns/KDR,Motor Control Equipment,,,,010.012.021.018
+10.12.21.19,Kilns/KDR,Motor Control Equipment,,,,010.012.021.019
+10.12.21.20,Kilns/KDR,Motor Control Equipment,,,,010.012.021.020
+10.12.22.1,EAF Dust Washing,Motor Control Equipment,EAF-MB003,Altivar71 VSD - EAF-MB003,,010.012.022.001
+10.12.22.2,EAF Dust Washing,Motor Control Equipment,EAF-MB105,Altivar71 VSD - EAF-MB105,,010.012.022.002
+10.12.22.3,EAF Dust Washing,Motor Control Equipment,EAF-MB106,Altivar71 VSD - EAF-MB106,,010.012.022.003
+10.12.22.4,EAF Dust Washing,Motor Control Equipment,EAF-MB107,Altivar71 VSD - EAF-MB107,,010.012.022.004
+10.12.22.5,EAF Dust Washing,Motor Control Equipment,EAF-MB108A,Altivar71 VSD - EAF-MB108A,,010.012.022.005
+10.12.22.6,EAF Dust Washing,Motor Control Equipment,EAF-MB108B,Altivar71 VSD - EAF-MB108B,,010.012.022.006
+10.12.22.7,EAF Dust Washing,Motor Control Equipment,EAF-MB110,Altivar71 VSD - EAF-MB110,,010.012.022.007
+10.12.22.8,EAF Dust Washing,Motor Control Equipment,EAF-MB205,Altivar71 VSD - EAF-MB205,,010.012.022.008
+10.12.22.9,EAF Dust Washing,Motor Control Equipment,EAF-MB206,Altivar71 VSD - EAF-MB206,,010.012.022.009
+10.12.22.10,EAF Dust Washing,Motor Control Equipment,EAF-MB207,Altivar71 VSD - EAF-MB207,,010.012.022.010
+10.12.22.11,EAF Dust Washing,Motor Control Equipment,EAF-MB208A,Altivar71 VSD - EAF-MB208A,,010.012.022.011
+10.12.22.12,EAF Dust Washing,Motor Control Equipment,EAF-MB208B,Altivar71 VSD - EAF-MB208B,,010.012.022.012
+10.12.22.13,EAF Dust Washing,Motor Control Equipment,EAF-MB210,Altivar71 VSD - EAF-MB210,,010.012.022.013
+10.12.22.14,EAF Dust Washing,Motor Control Equipment,,,,010.012.022.014
+10.12.22.15,EAF Dust Washing,Motor Control Equipment,,,,010.012.022.015
+10.12.22.16,EAF Dust Washing,Motor Control Equipment,,,,010.012.022.016
+10.12.22.17,EAF Dust Washing,Motor Control Equipment,,,,010.012.022.017
+10.12.22.18,EAF Dust Washing,Motor Control Equipment,,,,010.012.022.018
+10.12.22.19,EAF Dust Washing,Motor Control Equipment,,,,010.012.022.019
+10.12.22.20,EAF Dust Washing,Motor Control Equipment,,,,010.012.022.020
+10.12.128.21,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF1,Primary SCADA,200250067,010.012.128.021
+10.12.128.22,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF2,Secondary SCADA,200250068,010.012.128.022
+10.12.128.23,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF3,Maintenance Workstation,200250098,010.012.128.023
+10.12.128.24,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF4,Operator Workstation #1,200250097,010.012.128.024
+10.12.128.25,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF5,Operator Workstation #2,200250100,010.012.128.025
+10.12.128.26,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF6,,,010.012.128.026
+10.12.128.40,Blast Furnace,iFIX Nodes & Ethernet Switches,BFSW1A/B,Blast Furnace Ethernet Switch,,010.012.128.040
+10.12.128.41,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP1,Primary SCADA,200236158,010.012.128.041
+10.12.128.42,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP2,Secondary SCADA,"200,236,159",010.012.128.042
+10.12.128.43,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP3,Maintenance Workstation,100228780,010.012.128.043
+10.12.128.60,Acid Plant,iFIX Nodes & Ethernet Switches,APSW1,Acid Plant Ethernet Switch,,010.012.128.060
+10.12.128.161,Sinter Plant,iFIX Nodes & Ethernet Switches,PPPCSP1,Primary SCADA (Process Control LAN),200250075,010.012.128.161
+10.12.128.162,Sinter Plant,iFIX Nodes & Ethernet Switches,PPPCSP2,Secondary SCADA (Process Control LAN),200250076,010.012.128.162
+10.12.128.178,Sinter Plant,iFIX Nodes & Ethernet Switches,CSBSW1A/B,CSB Ethernet Switch,,010.012.128.178
+10.12.128.180,Sinter Plant,iFIX Nodes & Ethernet Switches,SPSW1A/B,Sinter South Ethernet Switch,,010.012.128.180
+10.12.128.254,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCRT1,Process Control To Business Network Router,,010.012.128.254
+10.12.129.21,Blast Furnace,PLCs & Control Equipment,BFPLC1,Blast Furnace Process PLC (Primary Rack),,010.012.129.021
+10.12.129.22,Blast Furnace,PLCs & Control Equipment,BFPLC2,Blast Furnace Process PLC (Secondary Rack),,010.012.129.022
+10.12.129.41,Acid Plant,PLCs & Control Equipment,APPLC1,Acid Plant Process PLC (Primary Rack),,010.012.129.041
+10.12.129.42,Acid Plant,PLCs & Control Equipment,APPLC2,Secondary Acid PLC (Secondary Rack),,010.012.129.042
+10.12.129.161,Sinter Plant,PLCs & Control Equipment,SPPLC1,Sinter Process PLC (Primary Rack),,010.012.129.161
+10.12.129.162,Sinter Plant,PLCs & Control Equipment,SPPLC2,Sinter Process PLC (Secondary Rack),,010.012.129.162
+10.13.1.182,Refinery,RIO Network,PMRCRP1,,,010.013.001.182
+10.13.1.183,Refinery,RIO Network,PMRCRA1,,,010.013.001.183
+10.13.1.221,EAF Dust Washing,RIO Network,EAFCRP1,Ethernet RIO Head,,010.013.001.221
+10.13.1.222,EAF Dust Washing,RIO Network,EAFCRA1,Ethernet RIO Slave,,010.013.001.222
+PPPCSF3,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF1,Primary SCADA/View - Top Control Room,200250065,#VALUE!
+PPPCSF2,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF2,Secondary SCADA/View - Tapping Floor Humpy,200250066,#VALUE!
+PPPCSF1,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF3,Maintenance Workstation - FWG Switchroom,200250087,#VALUE!
+PPPCSF4,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF4,Operator Workstation - Top Control Room,200250094,#VALUE!
+PPPCSF9,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF9,Operator Workstation - Tapping Floor Humpy,200250083,#VALUE!
+PPPCSF10,Slag Fumer,iFIX Nodes & Ethernet Switches,PPPCSF10,Operator Workstation - Tapping Floor Humpy,200250086,#VALUE!
+does not exist,Refinery,iFIX Nodes & Ethernet Switches,PP_SLMM3B,SLMM3 SCADA/View Node Spare,,#VALUE!
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
