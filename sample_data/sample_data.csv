@@ -1,4 +1,4 @@
-Address A,Port A,Address B,Port B,Packets, Bytes ,Packets A ? B,Bytes A ? B,Packets B ? A,Bytes B ? A,Rel Start,Duration,Bits/s A ? B,Bits/s B ? A
+Address A,Port A,Address B,Port B,Packets,Bytes,Packets A -> B,Bytes A -> B,Packets B -> A,Bytes B -> A,Rel Start,Duration,Bits/s A -> B,Bits/s B -> A
 10.11.1.31,60892,10.12.0.74,445,416,264930,180,17099,236,247831,479.924519,25.213583,5425.329673,78634.12352
 10.11.1.31,60893,10.12.0.72,445,447,149971,214,26396,233,123575,479.929053,13.189887,16009.84148,74951.36236
 10.11.1.31,60894,10.12.0.73,445,462,189861,213,25189,249,164672,479.937726,13.209826,15254.7051,99726.97596
