@@ -3,6 +3,7 @@ import numpy as np
 import math
 from faker import Faker
 import os
+import sys
 
 zero_min = 0.001
 bytes_max = 25000000
@@ -19,7 +20,7 @@ ip_list = ip_data['LAN IP Address']
 data = pd.DataFrame(columns=['Address A', 'Port A', 'Address B', 'Port B', 'Packets', 'Bytes', 'Packets A -> B', 'Bytes A -> B', 'Packets B -> A', 'Bytes B -> A', 'Rel Start', 'Duration', 'Bits/s A -> B', 'Bits/s B -> A'])
 
 rel_start = 0.0
-for i in range(1000):
+for i in range(int(sys.argv[1])):
     bytes_ab = np.random.randint(0, bytes_max)
     bytes_ba = np.random.randint(0, bytes_max)
     packet_size = np.random.randint(1, packet_size_max)
