@@ -1,35 +1,42 @@
-#/usr/bin/env python
-
 import numpy as np
 import matplotlib.pyplot as plt
 import sklearn.decomposition
 import os
+import sys
 
 def perform_pca(data, n_components=2):
     pca = sklearn.decomposition.PCA(n_components=n_components)
     pca.fit(data)
     return pca
 
-def create_pca_scatterplot(pca):
+def create_pca_scatterplot(pca, plot_name):
     plt.figure()
     plt.plot(pca.components_[0], pca.components_[1], 'o')
     plt.xlabel('Principal Component 1')
     plt.ylabel('Principal Component 2')
     plt.title('PCA Scatterplot')
-    plt.savefig('output/pca_scatterplot.png')
+    plt.savefig('output/' + plot_name + 'scatterplot.png')
     plt.close()
 
-def create_scree_plot(pca):
+def create_scree_plot(pca, plot_name):
     plt.figure()
     plt.plot(np.arange(1, data.shape[1] + 1), pca.singular_values_, 'bo-')
     plt.xlabel('Number of Principal Components')
     plt.ylabel('Singular Value')
     plt.title('Scree Plot')
-    plt.savefig('output/pca_scree.png')
+    plt.savefig('output/' + plot_name + 'scree.png')
     plt.close()
 
+# Get arguments
+file_path = 'output/features.csv'
+if len(sys.argv) > 1:
+    file_path = sys.argv[1]
+plot_name_prefix = 'pca_'
+if len(sys.argv) > 2:
+    plot_name_prefix = 'pca_' + sys.argv[2] + '_'
+
 # Features
-data = np.genfromtxt('output/features.csv', delimiter=',', skip_header=1)
+data = np.genfromtxt(file_path, delimiter=',', skip_header=1)
 
 # Create output directory if DNE
 if not os.path.exists('output'):
@@ -39,10 +46,10 @@ if not os.path.exists('output'):
 pca = perform_pca(data, n_components=2)
 
 # Plot the two principle components
-create_pca_scatterplot(pca)
+create_pca_scatterplot(pca, plot_name_prefix)
 
 # Perform PCA with components equal to number of features
 pca = perform_pca(data, n_components=data.shape[1])
 
 # Plot singular values
-create_scree_plot(pca)
+create_scree_plot(pca, plot_name_prefix)

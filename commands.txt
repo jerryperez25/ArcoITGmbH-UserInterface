@@ -1,3 +1,5 @@
 python generate_features.py sample_data/sample_data.csv sample_data/ip_inventory.csv output/features.csv
 python generate_features.py output/random_flow_data.csv sample_data/ip_inventory.csv output/features_random.csv
 python generate_features.py sample_data/sample_data.csv output/random_flow_data.csv sample_data/ip_inventory.csv output/features.csv
+python generate_pca_plots.py output/features.csv features
+python generate_pca_plots.py output/features_random.csv random
