@@ -68,17 +68,20 @@ class Generator(nn.Module):
     def __init__(self, ngpu):
         super(Generator, self).__init__()
         self.ngpu = ngpu
-        self.main = nn.Sequential(
-            nn.Linear(nz, 128, bias=False),
-            nn.ReLU(True),
-            nn.Linear(128, 64, bias=False),
-            nn.ReLU(True),
-            nn.Linear(64, nf, bias=False),
-            nn.Tanh()
-        )
+        self.input_layer = nn.Linear(nz, 128, bias=False)
+        self.hidden_layer = nn.Linear(128, 64, bias=False)
+        self.output_layer = nn.Linear(64, nf, bias=False)
+        self.actv_relu = nn.ReLU(True)
+        self.actv_tanh = nn.Tanh()
 
     def forward(self, input):
-        return self.main(input)
+        x = self.input_layer(input)
+        x = self.actv_relu(x)
+        x = self.hidden_layer(x)
+        x = self.actv_relu(x)
+        x = self.output_layer(x)
+        x = self.actv_tanh(x)
+        return x
 
 # custom weights initialization called on netG and netD
 def weights_init(m):
