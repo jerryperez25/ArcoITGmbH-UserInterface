@@ -11,7 +11,25 @@ def perform_pca(data, n_components=2):
 
 def create_pca_scatterplot(pca, plot_name):
     plt.figure()
-    plt.plot(pca.components_[0], pca.components_[1], 'o')
+    x = pca.components_[0]
+    y = pca.components_[1]
+    # p_colors = []
+    # for i in range(len(x)):
+    #     x_i = x[i]
+    #     y_i = y[i]
+    #     p_color = None
+    #     if x_i < 0.5:
+    #         if y_i < -0.2:
+    #             p_color = [0.4, 0.4, 1]
+    #         elif y_i >= -0.2 and y_i < 0.1:
+    #             p_color = [0.2, 0.2, 1]
+    #         else:
+    #             p_color = [0, 0, 1]
+    #     else:
+    #         p_color = [1, 0.2, 0.2]
+    #     p_colors.append(p_color)
+    # plt.scatter(x, y, c=p_colors)
+    plt.scatter(x, y)
     plt.xlabel('Principal Component 1')
     plt.ylabel('Principal Component 2')
     plt.title('PCA Scatterplot')
