@@ -27,6 +27,9 @@ generator_output_path = 'output/generator.pt'
 # Number of workers for dataloader
 workers = 2
 
+# Number of training epochs
+num_epochs = 3
+
 # Batch size during training
 batch_size = 8
 
@@ -41,9 +44,6 @@ n_one_hot = [12, 12, 3, 4, 3, 3]
 
 # Size of feature maps in generator
 nf = 47
-
-# Number of training epochs
-num_epochs = 10
 
 # Learning rate for optimizers
 lr = 0.0002
