@@ -12,21 +12,16 @@ LAN IP Address,Plant Area,Network Type,Device,Comment,Fix license,Full IP
 10.11.9.45,Miscellaneous,iFIX Nodes & Ethernet Switches,,SMS Ethernet/Modbus Bridge,,010.011.009.045
 10.11.9.47,Miscellaneous,iFIX Nodes & Ethernet Switches,PP_SMS,SMS (Site Metering System) SCADA Node,,010.011.009.047
 10.11.9.53,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP1,Primary SCADA / Operator Workstation (Purification Humpy),200250082,010.011.009.053
-10.11.9.54,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP2,"Secondary SCADA / Operator Workstation
- (Cell Floor Humpy)",200033538,010.011.009.054
-10.11.9.57,Zinc Plant,iFIX Nodes & Ethernet Switches,ZPSW1,"ZP Auto Batch Hirschmann Ethernet Switch
-(pw windmill)",,010.011.009.057
-10.11.9.59,Kilns/KDR,iFIX Nodes & Ethernet Switches,KDRSW1,"Kilns Hirschmann Ethernet Switch
-(pw windmill)",,010.011.009.059
-10.11.9.61,Kilns/KDR,iFIX Nodes & Ethernet Switches,,Slag Fumer Process PLC Room Hirschmann Ethernet Switch (pw windmill),,010.011.009.061
-10.11.9.63,Zinc Plant,PLCs & Control Equipment,ZPPLC1,"Zinc Plant Auto Batch PLC
-(admin/windmill)",,010.011.009.063
+10.11.9.54,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP2,Secondary SCADA / Operator Workstation (Cell Floor Humpy),200033538,010.011.009.054
+10.11.9.57,Zinc Plant,iFIX Nodes & Ethernet Switches,ZPSW1,ZP Auto Batch Hirschmann Ethernet Switch (pw windmill),,010.011.009.057
+10.11.9.59,Kilns/KDR,iFIX Nodes & Ethernet Switches,KDRSW1,Kilns Hirschmann Ethernet Switch (pw windmill),,010.011.009.059
+10.11.9.61,Kilns/KDR,iFIX Nodes & Ethernet Switches,,Slag Fumer Process PLC Room Hirschmann Ethernet Switch(pw windmill),,010.011.009.061
+10.11.9.63,Zinc Plant,PLCs & Control Equipment,ZPPLC1,Zinc Plant Auto Batch PLC (admin/windmill),,010.011.009.063
 10.11.9.64,Zinc Plant,PLCs & Control Equipment,,Zinc Plant Cell Floor ABB PLC #1 Rectifier,,010.011.009.064
 10.11.9.65,Slag Fumer,PLCs & Control Equipment,SFMBPE1,MB+/Ethernet Bridge,,010.011.009.065
 10.11.9.67,Kilns/KDR,PLCs & Control Equipment,,KDR Waste Water Ethernet/Modbus Bridge,,010.011.009.067
 10.11.9.69,Miscellaneous,iFIX Nodes & Ethernet Switches,,Engineering Test PLC,,010.011.009.069
-10.11.9.81,Copper Plant,iFIX Nodes & Ethernet Switches,,"Copper Plant Hirschmann Ethernet Switch
-(pw windmill)",,010.011.009.081
+10.11.9.81,Copper Plant,iFIX Nodes & Ethernet Switches,,Copper Plant Hirschmann Ethernet Switch (pw windmill),,010.011.009.081
 10.11.9.84,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP4,,,010.011.009.084
 10.11.9.85,Zinc Plant,iFIX Nodes & Ethernet Switches,PPPCZP5,,,010.011.009.085
 10.11.9.88,Zinc Plant,PLCs & Control Equipment,,pi,,010.011.009.088
@@ -34,8 +29,7 @@ LAN IP Address,Plant Area,Network Type,Device,Comment,Fix license,Full IP
 10.11.9.90,Zinc Plant,PLCs & Control Equipment,,,,010.011.009.090
 10.11.9.93,Miscellaneous,iFIX Nodes & Ethernet Switches,PP_FIX1,1st Spare Fix Machine,,010.011.009.093
 10.11.9.95,Miscellaneous,iFIX Nodes & Ethernet Switches,PP_FIX2,2nd Spare Fix Machine,,010.011.009.095
-10.11.9.101,Slag Fumer,iFIX Nodes & Ethernet Switches,,"Slag Fumer FWG Hirschmann Ethernet Switch
-(pw windmill)",,010.011.009.101
+10.11.9.101,Slag Fumer,iFIX Nodes & Ethernet Switches,,Slag Fumer FWG Hirschmann Ethernet Switch (pw windmill),,010.011.009.101
 10.11.9.101,Miscellaneous,iFIX Nodes & Ethernet Switches,,Engineering Testing - Hirschmann Ethernet Switch,,010.011.009.101
 10.11.9.103,Miscellaneous,iFIX Nodes & Ethernet Switches,,Engineering Testing - Ethernet/MB+ Bridge,,010.011.009.103
 10.11.9.105,Power Plant,PLCs & Control Equipment,,Power Plant Diesel Ethernet/Modbus Bridge,,010.011.009.105
@@ -45,8 +39,7 @@ LAN IP Address,Plant Area,Network Type,Device,Comment,Fix license,Full IP
 10.11.9.109,Slag Fumer,iFIX Nodes & Ethernet Switches,,Process PLC Room  Hirschmann Ethernet Switch (ex PETS) (pw windmill),,010.011.009.109
 10.11.9.109,Miscellaneous,iFIX Nodes & Ethernet Switches,,Engineering Testing - Hirschmann Ethernet Switch,,010.011.009.109
 10.11.9.111,Refinery,iFIX Nodes & Ethernet Switches,PPSPCSLM3,SLMM3 SCADA/View Node user               :administrator pass :deskpro,200250089,010.011.009.111
-10.11.9.113,Refinery,iFIX Nodes & Ethernet Switches,PP_SLMM3B,"SLMM3 SCADA/View Node Spare 
-(not on network)",,010.011.009.113
+10.11.9.113,Refinery,iFIX Nodes & Ethernet Switches,PP_SLMM3B,SLMM3 SCADA/View Node Spare (not on network),,010.011.009.113
 10.11.9.115,Refinery,iFIX Nodes & Ethernet Switches,B_MOULD,Butt Wheel SCADA/View Node,200250088,010.011.009.115
 10.11.9.127,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCEM,Energy Management Server,,010.011.009.127
 10.11.9.128,Other ProcN Devices,iFIX Nodes & Ethernet Switches,PPPCEM1,New Energy Management Server,,010.011.009.128
@@ -196,7 +189,7 @@ LAN IP Address,Plant Area,Network Type,Device,Comment,Fix license,Full IP
 10.12.0.142,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP2,Secondary SCADA ,200250070,010.012.000.142
 10.12.0.143,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP3,Maintenance Workstation,200267933,010.012.000.143
 10.12.0.144,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP4,Operator Workstation,200267934,010.012.000.144
-10.12.0.145,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP5,Operator Workstation,"200,267,935",010.012.000.145
+10.12.0.145,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP5,Operator Workstation,200267935,010.012.000.145
 10.12.0.146,Copper Plant,iFIX Nodes & Ethernet Switches,PPPCCP6,Operator Workstation Lab,,010.012.000.146
 10.12.0.147,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.147
 10.12.0.148,Copper Plant,iFIX Nodes & Ethernet Switches,,,,010.012.000.148
@@ -239,16 +232,14 @@ LAN IP Address,Plant Area,Network Type,Device,Comment,Fix license,Full IP
 10.12.0.189,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.189
 10.12.0.190,Refinery,iFIX Nodes & Ethernet Switches,PPPCRF10,Alloys Mtce PC,200170628,010.012.000.190
 10.12.0.192,Refinery,iFIX Nodes & Ethernet Switches,PPSPCSLM3,SLMM3 SCADA/View Node user               :administrator pass :deskpro,200250089,010.012.000.192
-10.12.0.194,Refinery,iFIX Nodes & Ethernet Switches,B_MOULD,"Butt Wheel SCADA/View Node
-user:BUTT WHEEL pass:deskpro",200250088,010.012.000.194
+10.12.0.194,Refinery,iFIX Nodes & Ethernet Switches,B_MOULD,Butt Wheel SCADA/View Node user:BUTT WHEEL pass:deskpro,200250088,010.012.000.194
 10.12.0.195,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.195
 10.12.0.196,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.196
 10.12.0.197,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.197
 10.12.0.198,Refinery,iFIX Nodes & Ethernet Switches,,,,010.012.000.198
 10.12.0.199,Refinery,iFIX Nodes & Ethernet Switches,PMRSW1,PMR EER Ethernet Switch,,010.012.000.199
 10.12.0.200,Refinery,iFIX Nodes & Ethernet Switches,RFSW1,KBA Ethernet Switch - future,,010.012.000.200
-10.12.0.201,Kilns/KDR,iFIX Nodes & Ethernet Switches,PPPCKDR1,"Primary SCADA/Operator Workstation (Kilns)
-",200037176,010.012.000.201
+10.12.0.201,Kilns/KDR,iFIX Nodes & Ethernet Switches,PPPCKDR1,Primary SCADA/Operator Workstation (Kilns),200037176,010.012.000.201
 10.12.0.202,Kilns/KDR,iFIX Nodes & Ethernet Switches,PPPCKDR2,WWT Operator Workstation,200037177,010.012.000.202
 10.12.0.203,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.203
 10.12.0.204,Kilns/KDR,iFIX Nodes & Ethernet Switches,,,,010.012.000.204
@@ -809,7 +800,7 @@ user:BUTT WHEEL pass:deskpro",200250088,010.012.000.194
 10.12.128.26,Blast Furnace,iFIX Nodes & Ethernet Switches,PPPCBF6,,,010.012.128.026
 10.12.128.40,Blast Furnace,iFIX Nodes & Ethernet Switches,BFSW1A/B,Blast Furnace Ethernet Switch,,010.012.128.040
 10.12.128.41,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP1,Primary SCADA,200236158,010.012.128.041
-10.12.128.42,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP2,Secondary SCADA,"200,236,159",010.012.128.042
+10.12.128.42,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP2,Secondary SCADA,200236159,010.012.128.042
 10.12.128.43,Acid Plant,iFIX Nodes & Ethernet Switches,PPPCAP3,Maintenance Workstation,100228780,010.012.128.043
 10.12.128.60,Acid Plant,iFIX Nodes & Ethernet Switches,APSW1,Acid Plant Ethernet Switch,,010.012.128.060
 10.12.128.161,Sinter Plant,iFIX Nodes & Ethernet Switches,PPPCSP1,Primary SCADA (Process Control LAN),200250075,010.012.128.161
