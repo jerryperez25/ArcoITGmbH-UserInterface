@@ -95,6 +95,7 @@ def encode_labels(features):
 features = pd.DataFrame(data={})
 features_devectored = pd.DataFrame(data={})
 
+# Get all possible categories of column
 plant_area_categories = getCategories('Plant Area')
 network_type_categories = getCategories('Network Type')
 
@@ -135,32 +136,22 @@ for i in range(len(site_a)):
 features['Same Site'] = asset_a_b
 features_devectored['Same Site'] = asset_a_b
 
-# Same Subnet
-address_a = list(flow_data['Address A'])
-address_b = list(flow_data['Address B'])
-subnet_a_b = []
-for i in range(len(address_a)):
-    subnet_a = '.'.join(address_a[i].split('.')[:-1])
-    subnet_b = '.'.join(address_b[i].split('.')[:-1])
-    subnet_a_b.append(1. if subnet_a == subnet_b else 0.)
-features['Same Subnet'] = subnet_a_b
-features_devectored['Same Subnet'] = subnet_a_b
+# Unique connection
+history = []
+unique_connection = []
+for i in range(flow_data.shape[0]):
+    ip_a = flow_data['Address A'][i]
+    ip_b = flow_data['Address B'][i]
+    ip_pair = ip_a + '+' + ip_b
+    if ip_pair in history:
+        unique_connection.append(0.)
+    else:
+        history.append(ip_pair)
+        unique_connection.append(1.)
+features['Unique Connection'] = unique_connection
+features_devectored['Unique Connection'] = unique_connection
 
-# Site Pair
-site_pair = []
-for i in range(len(site_a)):
-    site_pair.append(site_a[i] + '-' + site_b[i])
-site_pair_labels = encode_labels(site_pair)
-features['Site Pairs'] = site_pair_labels
-features_devectored['Site Pairs'] = site_pair_labels
-
-# Network Pair
-network_pair = []
-for i in range(len(network_type_a)):
-    network_pair.append(network_type_a[i] + '-' + network_type_b[i])
-network_pair_labels = encode_labels(network_pair)
-features['Network Pairs'] = network_pair_labels
-features_devectored['Network Pairs'] = network_pair_labels
+# Site connection frequency
 
 # Save to file
 features.to_csv(sys.argv[len(sys.argv) - 1], index=False)
@@ -203,3 +194,30 @@ features_devectored.to_csv(sys.argv[len(sys.argv) - 1].split('.')[0] + '-devecto
 #
 # bit_rate_ba_z = normalize_col(flow_data['Bits/s B -> A'])
 # features['Bits/s B -> A (z)'] = bit_rate_ba_z
+
+# # Same Subnet
+# address_a = list(flow_data['Address A'])
+# address_b = list(flow_data['Address B'])
+# subnet_a_b = []
+# for i in range(len(address_a)):
+#     subnet_a = '.'.join(address_a[i].split('.')[:-1])
+#     subnet_b = '.'.join(address_b[i].split('.')[:-1])
+#     subnet_a_b.append(1. if subnet_a == subnet_b else 0.)
+# features['Same Subnet'] = subnet_a_b
+# features_devectored['Same Subnet'] = subnet_a_b
+#
+# # Site Pair
+# site_pair = []
+# for i in range(len(site_a)):
+#     site_pair.append(site_a[i] + '-' + site_b[i])
+# site_pair_labels = encode_labels(site_pair)
+# features['Site Pairs'] = site_pair_labels
+# features_devectored['Site Pairs'] = site_pair_labels
+#
+# # Network Pair
+# network_pair = []
+# for i in range(len(network_type_a)):
+#     network_pair.append(network_type_a[i] + '-' + network_type_b[i])
+# network_pair_labels = encode_labels(network_pair)
+# features['Network Pairs'] = network_pair_labels
+# features_devectored['Network Pairs'] = network_pair_labels

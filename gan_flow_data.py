@@ -36,15 +36,6 @@ batch_size = 8
 # Size of z latent vector (i.e. size of generator input)
 nz = 100
 
-# Number of features
-nc = 16
-
-# Number of one hot vectors for each categorical feature
-n_one_hot = [12, 12, 3, 4, 3, 3]
-
-# Size of feature maps in generator
-nf = 47
-
 # Learning rate for optimizers
 lr = 0.0002
 
@@ -53,6 +44,31 @@ beta1 = 0.5
 
 # Number of GPUs available. Use 0 for CPU mode.
 ngpu = 0
+
+headers = None
+with open(dataroot) as f:
+    headers = f.readline()[:-1].split(',')
+
+# Number of features
+nc = 0
+# Number of one hot vectors for each categorical feature
+n_one_hot = []
+# Size of feature maps in generator
+nf = 0
+
+prev_one_hot = ''
+for h in headers:
+    if '_' in h:
+        one_hot = h.split('_')[0]
+        if one_hot == prev_one_hot:
+            n_one_hot[-1] += 1
+        else:
+            prev_one_hot = one_hot
+            nc += 1
+            n_one_hot.append(1)
+    else:
+        nc += 1
+    nf += 1
 
 class Discriminator(nn.Module):
     def __init__(self, ngpu):
@@ -85,6 +101,15 @@ def OneHot(input):
         output.append(x1)
     return torch.tensor(output)
 
+def Binary(input):
+    output = []
+    for x in input:
+        output_x = []
+        for y in x:
+            output_x.append(1. if y > 0.5 else 0.)
+        output.append(output_x)
+    return torch.tensor(output)
+
 class Generator(nn.Module):
     def __init__(self, ngpu):
         super(Generator, self).__init__()
@@ -102,6 +127,7 @@ class Generator(nn.Module):
         self.input_cat_layer5 = nn.Linear(1, n_one_hot[5], bias=False)
         self.actv_softmax = nn.Softmax(dim=1)
         self.actv_onehot = OneHot
+        self.actv_binary = Binary
 
     def forward(self, input):
         # Sequential model
@@ -146,6 +172,7 @@ class Generator(nn.Module):
         x5 = self.input_cat_layer5(x5)
         x5 = self.actv_softmax(x5)
         x5 = self.actv_onehot(x5)
+        x6 = self.actv_binary(x6)
 
         # Concat x's
         x = torch.cat((x0, x1, x2, x3, x4, x5, x6), 1)
@@ -153,13 +180,14 @@ class Generator(nn.Module):
         return x
 
 # custom weights initialization called on netG and netD
+# try orthogonal matrix initialization
 def weights_init(m):
     classname = m.__class__.__name__
     if classname.find('Linear') != -1:
         nn.init.normal_(m.weight.data, 0.0, 0.02)
 
 if __name__ == '__main__':
-    #manualSeed = random.randint(1, 10000) # use if you want new results
+    manualSeed = random.randint(1, 10000) # use if you want new results
     random.seed(manualSeed)
     torch.manual_seed(manualSeed)
 

@@ -1,13 +1,12 @@
 import pandas as pd
 
 flow_data = pd.read_csv('sample_data/sample_data.csv', header=0)
-ip_data = pd.read_csv('sample_data/ip_inventory.csv', header=0, index_col=0)
+ip_data = pd.read_csv('sample_data/ip_inventory.csv', header=0)
+ip_list = ip_data['LAN IP Address']
 
 def find_unknowns(address_name, unknowns):
     for ip in flow_data[address_name]:
-        try:
-            ip_data.at[ip, col_name]
-        except:
+        if not ip in ip_list.values:
             if ip in unknowns:
                 unknowns[ip] = unknowns[ip] + 1
             else:
