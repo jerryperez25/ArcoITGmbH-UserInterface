@@ -1,28 +1,13 @@
 from __future__ import print_function
-#%matplotlib inline
-import argparse
-import os
 import random
 import torch
 import torch.nn as nn
 import torch.nn.parallel
-import torch.backends.cudnn as cudnn
 import torch.optim as optim
 from torch.utils.data import TensorDataset, DataLoader
-import torchvision.utils as vutils
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from IPython.display import HTML
 
 # Set random seed for reproducibility
-manualSeed = 0
-
-# Filepath for input data
-dataroot = 'output/features.csv'
-
-# Filepath for generator model
-generator_output_path = 'output/generator.pt'
+# manualSeed = 0
 
 # Number of workers for dataloader
 workers = 2
@@ -45,154 +30,154 @@ beta1 = 0.5
 # Number of GPUs available. Use 0 for CPU mode.
 ngpu = 0
 
-headers = None
-with open(dataroot) as f:
-    headers = f.readline()[:-1].split(',')
 
-# Number of features
-nc = 0
-# Number of one hot vectors for each categorical feature
-n_one_hot = []
-# Size of feature maps in generator
-nf = 0
+def generate(features):
+    # Number of features
+    nc = 0
+    # Number of one hot vectors for each categorical feature
+    n_one_hot = []
+    # Size of feature maps in generator
+    nf = 0
 
-prev_one_hot = ''
-for h in headers:
-    if '_' in h:
-        one_hot = h.split('_')[0]
-        if one_hot == prev_one_hot:
-            n_one_hot[-1] += 1
-        else:
-            prev_one_hot = one_hot
-            nc += 1
-            n_one_hot.append(1)
-    else:
-        nc += 1
-    nf += 1
+    # Create the dataset
+    data_tensor = torch.from_numpy(features.values)
+    dataset = TensorDataset(data_tensor.float())
+    headers = features.columns
 
-class Discriminator(nn.Module):
-    def __init__(self, ngpu):
-        super(Discriminator, self).__init__()
-        self.ngpu = ngpu
-        self.main = nn.Sequential(
-            nn.Linear(nf, 128, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            nn.Linear(128, 64, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-            nn.Linear(64, 1, bias=False),
-            nn.Sigmoid()
-        )
+    prev_one_hot = ''
+    for h in headers:
+        if '_' in h:
+            one_hot = h.split('_')[0]
+            if one_hot == prev_one_hot:
+                n_one_hot[-1] += 1
+            else:
+                prev_one_hot = one_hot
+                nc += 1
+                n_one_hot.append(1)
+        nf += 1
+    # TCP/UDP
+    nc += 1
+    n_one_hot.append(2)
 
-    def forward(self, input):
-        return self.main(input)
+    class Discriminator(nn.Module):
+        def __init__(self, ngpu):
+            super(Discriminator, self).__init__()
+            self.ngpu = ngpu
+            self.main = nn.Sequential(
+                nn.Linear(nf, 128, bias=False),
+                nn.LeakyReLU(0.2, inplace=True),
+                nn.Linear(128, 64, bias=False),
+                nn.LeakyReLU(0.2, inplace=True),
+                nn.Linear(64, 1, bias=False),
+                nn.Sigmoid()
+            )
 
-def OneHot(input):
-    output = []
-    for x in input:
-        y_max = x[0]
-        i = 0
-        for j in range(len(x)):
-            y = x[j]
-            if y > y_max:
-                y_max = y
-                i = j
-        x1 = [0.] * len(x)
-        x1[i] = 1.
-        output.append(x1)
-    return torch.tensor(output)
+        def forward(self, input):
+            return self.main(input)
 
-def Binary(input):
-    output = []
-    for x in input:
-        output_x = []
-        for y in x:
-            output_x.append(1. if y > 0.5 else 0.)
-        output.append(output_x)
-    return torch.tensor(output)
+    def OneHot(input):
+        output = []
+        for x in input:
+            y_max = x[0]
+            i = 0
+            for j in range(len(x)):
+                y = x[j]
+                if y > y_max:
+                    y_max = y
+                    i = j
+            x1 = [0.] * len(x)
+            x1[i] = 1.
+            output.append(x1)
+        return torch.tensor(output)
 
-class Generator(nn.Module):
-    def __init__(self, ngpu):
-        super(Generator, self).__init__()
-        self.ngpu = ngpu
-        self.input_layer = nn.Linear(nz, 128, bias=False)
-        self.hidden_layer = nn.Linear(128, 64, bias=False)
-        self.output_layer = nn.Linear(64, nc, bias=False)
-        self.actv_relu = nn.ReLU(True)
-        self.actv_tanh = nn.Tanh()
-        self.input_cat_layer0 = nn.Linear(1, n_one_hot[0], bias=False)
-        self.input_cat_layer1 = nn.Linear(1, n_one_hot[1], bias=False)
-        self.input_cat_layer2 = nn.Linear(1, n_one_hot[2], bias=False)
-        self.input_cat_layer3 = nn.Linear(1, n_one_hot[3], bias=False)
-        self.input_cat_layer4 = nn.Linear(1, n_one_hot[4], bias=False)
-        self.input_cat_layer5 = nn.Linear(1, n_one_hot[5], bias=False)
-        self.actv_softmax = nn.Softmax(dim=1)
-        self.actv_onehot = OneHot
-        self.actv_binary = Binary
+    def Binary(input):
+        output = []
+        for x in input:
+            output_x = []
+            for y in x:
+                output_x.append(1. if y > 0.5 else 0.)
+            output.append(output_x)
+        return torch.tensor(output)
 
-    def forward(self, input):
-        # Sequential model
-        x = self.input_layer(input)
-        x = self.actv_relu(x)
-        x = self.hidden_layer(x)
-        x = self.actv_relu(x)
-        x = self.output_layer(x)
-        x = self.actv_tanh(x)
+    class Generator(nn.Module):
+        def __init__(self, ngpu):
+            super(Generator, self).__init__()
+            self.ngpu = ngpu
+            self.input_layer = nn.Linear(nz, 128, bias=False)
+            self.hidden_layer = nn.Linear(128, 64, bias=False)
+            self.output_layer = nn.Linear(64, nc, bias=False)
+            self.actv_relu = nn.ReLU(True)
+            self.actv_tanh = nn.Tanh()
+            self.input_cat_layer0 = nn.Linear(1, n_one_hot[0], bias=False)
+            self.input_cat_layer1 = nn.Linear(1, n_one_hot[1], bias=False)
+            self.input_cat_layer2 = nn.Linear(1, n_one_hot[2], bias=False)
+            self.input_cat_layer3 = nn.Linear(1, n_one_hot[3], bias=False)
+            self.input_cat_layer4 = nn.Linear(1, n_one_hot[4], bias=False)
+            self.input_cat_layer5 = nn.Linear(1, n_one_hot[5], bias=False)
+            self.actv_softmax = nn.Softmax(dim=1)
+            self.actv_onehot = OneHot
+            self.actv_binary = Binary
 
-        # Categorical inputs
-        x0 = x[:, 0] # Site A
-        x0 = torch.reshape(x0, (x0.shape[0], 1))
-        x1 = x[:, 1] # Site B
-        x1 = torch.reshape(x1, (x1.shape[0], 1))
-        x2 = x[:, 2] # Network Type A
-        x2 = torch.reshape(x2, (x2.shape[0], 1))
-        x3 = x[:, 3] # Network Type B
-        x3 = torch.reshape(x3, (x3.shape[0], 1))
-        x4 = x[:, 4] # Port A
-        x4 = torch.reshape(x4, (x4.shape[0], 1))
-        x5 = x[:, 5] # Port B
-        x5 = torch.reshape(x5, (x5.shape[0], 1))
-        x6 = x[:, 6:] # The rest
+        def forward(self, input):
+            # Sequential model
+            x = self.input_layer(input)
+            x = self.actv_relu(x)
+            x = self.hidden_layer(x)
+            x = self.actv_relu(x)
+            x = self.output_layer(x)
+            x = self.actv_tanh(x)
 
-        # Parallel dense layers
-        x0 = self.input_cat_layer0(x0)
-        x0 = self.actv_softmax(x0)
-        x0 = self.actv_onehot(x0)
-        x1 = self.input_cat_layer1(x1)
-        x1 = self.actv_softmax(x1)
-        x1 = self.actv_onehot(x1)
-        x2 = self.input_cat_layer2(x2)
-        x2 = self.actv_softmax(x2)
-        x2 = self.actv_onehot(x2)
-        x3 = self.input_cat_layer3(x3)
-        x3 = self.actv_softmax(x3)
-        x3 = self.actv_onehot(x3)
-        x4 = self.input_cat_layer4(x4)
-        x4 = self.actv_softmax(x4)
-        x4 = self.actv_onehot(x4)
-        x5 = self.input_cat_layer5(x5)
-        x5 = self.actv_softmax(x5)
-        x5 = self.actv_onehot(x5)
-        x6 = self.actv_binary(x6)
+            # Categorical inputs
+            x0 = x[:, 0] # Site A
+            x0 = torch.reshape(x0, (x0.shape[0], 1))
+            x1 = x[:, 1] # Site B
+            x1 = torch.reshape(x1, (x1.shape[0], 1))
+            x2 = x[:, 2] # Network Type A
+            x2 = torch.reshape(x2, (x2.shape[0], 1))
+            x3 = x[:, 3] # Network Type B
+            x3 = torch.reshape(x3, (x3.shape[0], 1))
+            x4 = x[:, 4] # Port A
+            x4 = torch.reshape(x4, (x4.shape[0], 1))
+            x5 = x[:, 5] # Port B
+            x5 = torch.reshape(x5, (x5.shape[0], 1))
+            x6 = x[:, 6:] # The rest
 
-        # Concat x's
-        x = torch.cat((x0, x1, x2, x3, x4, x5, x6), 1)
+            # Parallel dense layers
+            x0 = self.input_cat_layer0(x0)
+            x0 = self.actv_softmax(x0)
+            x0 = self.actv_onehot(x0)
+            x1 = self.input_cat_layer1(x1)
+            x1 = self.actv_softmax(x1)
+            x1 = self.actv_onehot(x1)
+            x2 = self.input_cat_layer2(x2)
+            x2 = self.actv_softmax(x2)
+            x2 = self.actv_onehot(x2)
+            x3 = self.input_cat_layer3(x3)
+            x3 = self.actv_softmax(x3)
+            x3 = self.actv_onehot(x3)
+            x4 = self.input_cat_layer4(x4)
+            x4 = self.actv_softmax(x4)
+            x4 = self.actv_onehot(x4)
+            x5 = self.input_cat_layer5(x5)
+            x5 = self.actv_softmax(x5)
+            x5 = self.actv_onehot(x5)
+            x6 = self.actv_binary(x6)
 
-        return x
+            # Concat x's
+            x = torch.cat((x0, x1, x2, x3, x4, x5, x6), 1)
 
-# custom weights initialization called on netG and netD
-# try orthogonal matrix initialization
-def weights_init(m):
-    classname = m.__class__.__name__
-    if classname.find('Linear') != -1:
-        nn.init.normal_(m.weight.data, 0.0, 0.02)
+            return x
 
-if __name__ == '__main__':
+    # custom weights initialization called on netG and netD
+    # try orthogonal matrix initialization
+    def weights_init(m):
+        classname = m.__class__.__name__
+        if classname.find('Linear') != -1:
+            nn.init.normal_(m.weight.data, 0.0, 0.02)
+
     manualSeed = random.randint(1, 10000) # use if you want new results
     random.seed(manualSeed)
     torch.manual_seed(manualSeed)
-
-    # Create the dataset
-    dataset = TensorDataset(torch.Tensor(np.genfromtxt(dataroot, delimiter=',', skip_header=1)))
 
     # Create the dataloader
     dataloader = DataLoader(dataset, batch_size=batch_size,
@@ -295,5 +280,4 @@ if __name__ == '__main__':
                          errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
     print('Training finished')
 
-    torch.save(netG.state_dict(), generator_output_path)
-    print('Saved generator to \'' + generator_output_path + '\'')
+    return netG, headers
