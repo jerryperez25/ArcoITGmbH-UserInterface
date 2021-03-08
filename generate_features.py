@@ -50,6 +50,8 @@ def map_ports(a_b, col, flow, port_data, tags):
             one_hot_ports[names.index(v_port)] = 1
             v_tcp_udp = r[tcp_udp_name]
             one_hot_tcp_udp[0 if v_tcp_udp == 'TCP' else 1] = 1
+        else:
+            one_hot_tcp_udp[0] = 1
         ports.append(one_hot_ports)
         tcp_udp.append(one_hot_tcp_udp)
     df_ports = pd.DataFrame(ports, columns=ports_headers)
