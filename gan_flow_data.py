@@ -6,6 +6,13 @@ import torch.nn.parallel
 import torch.optim as optim
 from torch.utils.data import TensorDataset, DataLoader
 
+debug_level = 0
+
+
+def print_debug(print_out):
+    if debug_level > 0:
+        print(print_out)
+
 # Set random seed for reproducibility
 # manualSeed = 0
 
@@ -182,11 +189,9 @@ def generate(features):
     # Create the dataloader
     dataloader = DataLoader(dataset, batch_size=batch_size,
                                              shuffle=True, num_workers=workers)
-    print('Training data loaded')
 
     # Decide which device we want to run on
     device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu > 0) else "cpu")
-    print('Device: ' + device.type)
 
     # Create the Generator and the Discriminator
     netG = Generator(ngpu).to(device)
@@ -217,10 +222,8 @@ def generate(features):
     optimizerD = optim.Adam(netD.parameters(), lr=lr, betas=(beta1, 0.999))
     optimizerG = optim.Adam(netG.parameters(), lr=lr, betas=(beta1, 0.999))
 
-    print('Created generator and discriminator')
-
     # Training Loop
-    print('Training started')
+    print_debug('Training started')
     for epoch in range(num_epochs):
         for i, data in enumerate(dataloader, 0):
             ############################
@@ -275,9 +278,9 @@ def generate(features):
 
             # Output training stats
             if i % 50 == 0:
-                print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f'
-                      % (epoch, num_epochs, i, len(dataloader),
-                         errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
-    print('Training finished')
+                output_stats = '[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f' % (epoch, num_epochs, i, len(dataloader),
+                         errD.item(), errG.item(), D_x, D_G_z1, D_G_z2)
+                print_debug(output_stats)
+    print_debug('Training finished')
 
     return netG, headers
