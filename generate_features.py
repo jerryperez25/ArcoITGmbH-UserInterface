@@ -7,24 +7,14 @@ ADDRESS_B_COL = 2
 PORT_B_COL = 3
 
 
-def get_index(df, column, value, compare_func=lambda a, b: a == b):
-    for i, d in df.iterrows():
-        if compare_func(d[column], value):
-            return i
-    return -1
+def get_row(df, index):
+    try:
+        return df.loc[[index]]
+    except KeyError:
+        return None
 
 
-def compare_prefix(prefix, ip):
-    prefix_subnet = prefix.split('.')[0:-1]
-    prefix_range = prefix.split('.')[-1]
-    prefix_range_min = int(prefix_range.split('/')[0])
-    prefix_range_max = int(prefix_range.split('/')[1])
-    ip_subnet = ip.split('.')[0:-1]
-    ip_broadcast = int(ip.split('.')[-1])
-    return ip_subnet == prefix_subnet and prefix_range_min <= ip_broadcast <= prefix_range_max
-
-
-def map_ips(a_b, col, flow, data, tags, compare_func=None):
+def map_ips(a_b, col, flow, data, tags):
     devices_header = []
     devices = []
     for n in tags.keys():
@@ -32,11 +22,10 @@ def map_ips(a_b, col, flow, data, tags, compare_func=None):
         for name in names:
             devices_header.append(n + ' ' + a_b + '_' + name)
         for ip in flow[flow.columns[col]]:
-            i = get_index(data, 0, ip) if compare_func is None else get_index(data, 0, ip, compare_func)
+            r = get_row(data, ip)
             one_hot = [0] * len(names)
-            if i != -1:
-                v = data[n][i]
-                one_hot[names.index(v)] = 1
+            if r is not None:
+                one_hot[names.index(r[n][0])] = 1
             devices.append(one_hot)
     return pd.DataFrame(devices, columns=devices_header)
 
@@ -52,14 +41,14 @@ def map_ports(a_b, col, flow, port_data, tags):
     for name in names:
         ports_headers.append(tag_name + ' ' + a_b + '_' + name)
     for port in flow[flow.columns[col]]:
-        i = get_index(port_data, 0, port)
+        r = get_row(port_data, port)
 
         one_hot_ports = [0] * len(names)
         one_hot_tcp_udp = [0] * 2
-        if i != -1:
-            v_port = port_data[tag_name][i]
+        if r is not None:
+            v_port = r[tag_name]
             one_hot_ports[names.index(v_port)] = 1
-            v_tcp_udp = port_data[tcp_udp_name][i]
+            v_tcp_udp = r[tcp_udp_name]
             one_hot_tcp_udp[0 if v_tcp_udp == 'TCP' else 1] = 1
         ports.append(one_hot_ports)
         tcp_udp.append(one_hot_tcp_udp)
@@ -68,16 +57,36 @@ def map_ports(a_b, col, flow, port_data, tags):
     return pd.concat([df_ports, df_tcp_udp], axis=1)
 
 
+def expand_prefixes(data):
+    expanded_data = []
+    for i, r in data.iterrows():
+        prefix = r[0]
+        prefix_subnet = prefix.split('.')[:-1]
+        prefix_range = prefix.split('.')[-1]
+        prefix_range_min = int(prefix_range.split('/')[0])
+        prefix_range_max = int(prefix_range.split('/')[1])
+        for broadcast in range(prefix_range_min, prefix_range_max + 1):
+            ip_array = prefix_subnet + [str(broadcast)]
+            ip = '.'.join(ip_array)
+            expanded_data.append([ip, r[1]])
+    df = pd.DataFrame(expanded_data, columns=data.columns)
+    return df.set_index(df.columns[0])
+
+
 def generate(device_data, prefix_data, app_data, flow_data):
     device_tags = firewall_tags.generate_tags(device_data)
     prefix_tags = firewall_tags.generate_tags(prefix_data)
     port_tags = firewall_tags.generate_tags(app_data)
 
+    device_data = device_data.set_index(device_data.columns[0])
+
     devices_a = map_ips('A', ADDRESS_A_COL, flow_data, device_data, device_tags)
     devices_b = map_ips('B', ADDRESS_B_COL, flow_data, device_data, device_tags)
 
-    prefixes_a = map_ips('A', ADDRESS_A_COL, flow_data, prefix_data, prefix_tags, compare_prefix)
-    prefixes_b = map_ips('B', ADDRESS_B_COL, flow_data, prefix_data, prefix_tags, compare_prefix)
+    expanded_prefix_data = expand_prefixes(prefix_data)
+
+    prefixes_a = map_ips('A', ADDRESS_A_COL, flow_data, expanded_prefix_data, prefix_tags)
+    prefixes_b = map_ips('B', ADDRESS_B_COL, flow_data, expanded_prefix_data, prefix_tags)
 
     ports_b = map_ports('B', PORT_B_COL, flow_data, app_data, port_tags)
 
@@ -88,6 +97,6 @@ if __name__ == "__main__":
     device_data = pd.read_csv('data/devices.csv')
     prefix_data = pd.read_csv('data/prefixes.csv')
     app_data = pd.read_csv('data/applications.csv')
-    flow_data = pd.read_csv('data/flow2.csv')
+    flow_data = pd.read_csv('data/flow.csv')
     features = generate(device_data, prefix_data, app_data, flow_data)
     features.to_csv('data/features.csv', index=False)

@@ -139,7 +139,6 @@ def generate(models, feature_names, device_data, prefix_data, app_data):
     rules = []
     for model in models:
         add_rules(rules, get_rules(model, feature_names))
-    print(*rules, sep='\n')
     firewall = create_firewall_rules(rules, device_data, prefix_data, app_data)
     return firewall
 
