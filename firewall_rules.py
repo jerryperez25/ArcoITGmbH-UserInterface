@@ -24,7 +24,6 @@ def get_rules(model, feature_names, node=0, parent_name=None, parent_decision=Fa
     feature = tree_.feature[node]
     if feature >= 0:
         name = feature_names[feature]
-        threshold = tree_.threshold[node]
         left_child = tree_.children_left[node]
         right_child = tree_.children_right[node]
         rules = []
@@ -36,13 +35,14 @@ def get_rules(model, feature_names, node=0, parent_name=None, parent_decision=Fa
         return [rule] if value[0][0] != 0 else []
 
 
-def add_all_except(array1, array2, el, tag=None):
-    for e in array2:
-        if e != el and e not in array1:
-            if tag is not None:
-                array1.append((tag, e))
-            else:
-                array1.append(e)
+def append_exclusive(array1, array2, el):
+    if len(array1) == 0:
+        for e in array2:
+            array1.append(e)
+
+    if el in array1:
+        array1.remove(el)
+
     return array1
 
 
@@ -78,35 +78,59 @@ def create_firewall_rules(rules, device_data, prefix_data, app_data):
     prefix_tags = firewall_tags.generate_tags(prefix_data)
     port_tags = firewall_tags.generate_tags(app_data)
 
-    # Should keep track of both inclusions and exclusions for from, to, and ports (not only inclusions)
     firewall_rules = []
     for r in rules:
         from_tags = []
         to_tags = []
         tcp_udp = 'both'
         ports = []
-        for s in r.split(' & '):
-            for k in device_tags.keys():
+
+        for k in device_tags.keys():
+            from_device_tags = []
+            to_device_tags = []
+            for s in r.split(' & '):
                 if k in s:
                     if ' = ' in s:
-                        from_tags.append((k, s.split(' = ')[1]))
+                        if ' B ' in s:
+                            from_device_tags.append(s.split(' = ')[1])
+                        else:
+                            to_device_tags.append(s.split(' = ')[1])
                     else:
-                        pass
-                        # from_tags = add_all_except(from_tags, device_tags[k], s.split(' != ')[1], k)
-            for k in prefix_tags.keys():
+                        if ' B ' in s:
+                            from_device_tags = append_exclusive(from_device_tags, device_tags[k], s.split(' != ')[1])
+                        else:
+                            to_device_tags = append_exclusive(to_device_tags, device_tags[k], s.split(' != ')[1])
+            for dt in from_device_tags:
+                from_tags.append((k, dt))
+            for dt in to_device_tags:
+                to_tags.append((k, dt))
+        for k in prefix_tags.keys():
+            from_prefix_tags = []
+            to_prefix_tags = []
+            for s in r.split(' & '):
                 if k in s:
                     if ' = ' in s:
-                        from_tags.append((k, s.split(' = ')[1]))
+                        if ' B ' in s:
+                            from_prefix_tags.append(s.split(' = ')[1])
+                        else:
+                            to_prefix_tags.append(s.split(' = ')[1])
                     else:
-                        pass
-                        # from_tags = add_all_except(from_tags, prefix_tags[k], s.split(' != ')[1], k)
-            for k in list(port_tags.keys())[1:]:
+                        if ' B ' in s:
+                            from_prefix_tags = append_exclusive(from_prefix_tags, prefix_tags[k], s.split(' != ')[1])
+                        else:
+                            to_prefix_tags = append_exclusive(to_prefix_tags, prefix_tags[k], s.split(' != ')[1])
+            for dt in from_prefix_tags:
+                from_tags.append((k, dt))
+            for dt in to_prefix_tags:
+                to_tags.append((k, dt))
+        for k in list(port_tags.keys())[1:]:
+            for s in r.split(' & '):
                 if k in s:
                     if ' = ' in s:
                         ports.append(s.split(' = ')[1])
                     else:
-                        pass
-                        # ports = add_all_except(ports, port_tags[k], s.split(' != ')[1])
+                        ports = append_exclusive(ports, port_tags[k], s.split(' != ')[1])
+        for s in r.split(' & '):
             if 'TCP' in s and 'ALLOW' in s:
                 if tcp_udp != 'udp':
                     tcp_udp = 'tcp'
@@ -146,8 +170,8 @@ def generate(models, feature_names, device_data, prefix_data, app_data):
 if __name__ == "__main__":
     X_0 = pd.read_csv('data/features.csv', header=0)
     X_1 = pd.read_csv('data/features_gan.csv', header=0)
-    models, feature_names = model_decision_tree.generate(X_0, X_1, 1)
-    rules = get_rules(models[0], feature_names)
+    models, feature_names = model_decision_tree.generate(X_0, X_1, 10)
+    rules = get_rules(models[5], feature_names)
     print(*rules, sep='\n')
     device_data = pd.read_csv('data/devices.csv')
     prefix_data = pd.read_csv('data/prefixes.csv')
