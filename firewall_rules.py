@@ -103,31 +103,32 @@ def create_firewall_rules(rules, device_data, prefix_data, app_data):
             for s in r.split(' & '):
                 if k in s:
                     if ' = ' in s:
-                        if ' B ' in s:
-                            from_device_tags.append(s.split(' = ')[1])
+                        if ' A ' in s:
+                            from_device_tags = [s.split(' = ')[1]]
                         else:
-                            to_device_tags.append(s.split(' = ')[1])
+                            to_device_tags = [s.split(' = ')[1]]
                     else:
-                        if ' B ' in s:
+                        if ' A ' in s:
                             from_device_tags = append_exclusive(from_device_tags, device_tags[k], s.split(' != ')[1])
                         else:
                             to_device_tags = append_exclusive(to_device_tags, device_tags[k], s.split(' != ')[1])
             if len(from_device_tags) > 0:
-                from_tags[k] = from_tags
+                from_tags[k] = from_device_tags
             if len(to_device_tags) > 0:
                 to_tags[k] = to_device_tags
+
         for k in prefix_tags.keys():
             from_prefix_tags = []
             to_prefix_tags = []
             for s in r.split(' & '):
                 if k in s:
                     if ' = ' in s:
-                        if ' B ' in s:
-                            from_prefix_tags.append(s.split(' = ')[1])
+                        if ' A ' in s:
+                            from_prefix_tags = [s.split(' = ')[1]]
                         else:
-                            to_prefix_tags.append(s.split(' = ')[1])
+                            to_prefix_tags = [s.split(' = ')[1]]
                     else:
-                        if ' B ' in s:
+                        if ' A ' in s:
                             from_prefix_tags = append_exclusive(from_prefix_tags, prefix_tags[k], s.split(' != ')[1])
                         else:
                             to_prefix_tags = append_exclusive(to_prefix_tags, prefix_tags[k], s.split(' != ')[1])
@@ -135,6 +136,7 @@ def create_firewall_rules(rules, device_data, prefix_data, app_data):
                 from_tags[k] = from_prefix_tags
             if len(to_prefix_tags) > 0:
                 to_tags[k] = to_prefix_tags
+
         for k in list(port_tags.keys())[1:]:
             for s in r.split(' & '):
                 if k in s:
@@ -153,6 +155,7 @@ def create_firewall_rules(rules, device_data, prefix_data, app_data):
                     tcp_udp = 'udp'
                 else:
                     tcp_udp = 'both'
+
         from_string = format_tag_list(from_tags)
         to_string = format_tag_list(to_tags)
         port_string = format_port_list(map_ports(ports, app_data))

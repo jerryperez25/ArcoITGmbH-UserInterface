@@ -1,0 +1,7 @@
+Port,TCP/UDP,Application Name
+80,TCP,http
+443,TCP,http
+22,TCP,SSH
+502,TCP,modbus
+194,TCP,irc
+6667,TCP,irc

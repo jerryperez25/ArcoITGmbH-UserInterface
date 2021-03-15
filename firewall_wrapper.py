@@ -2,6 +2,7 @@ from time import sleep
 import generate_features
 import gan_flow_data
 import generate_gan_feature_data
+import feature_faker
 import model_decision_tree
 import firewall_rules
 
@@ -21,6 +22,7 @@ def create_firewall_rules(device_data, prefix_data, app_data, flow_data):
 
     print('Generating fake flow data')
     features_1 = generate_gan_feature_data.generate(generator, headers, flow_data.shape[0] / 2)
+    # features_1 = feature_faker.generate(features_0, flow_data.shape[0] / 2)
     print('Generating completed')
     sleep(delay_time)
 

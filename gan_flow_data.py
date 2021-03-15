@@ -6,7 +6,7 @@ import torch.nn.parallel
 import torch.optim as optim
 from torch.utils.data import TensorDataset, DataLoader
 
-debug_level = 0
+debug_level = 1
 
 
 def print_debug(print_out):
@@ -20,16 +20,17 @@ def print_debug(print_out):
 workers = 2
 
 # Number of training epochs
-num_epochs = 3
+num_epochs = 10
 
 # Batch size during training
-batch_size = 8
+batch_size = 4
 
 # Size of z latent vector (i.e. size of generator input)
 nz = 100
 
 # Learning rate for optimizers
-lr = 0.0002
+lrD = 0.00002
+lrG = 0.0001
 
 # Beta1 hyperparam for Adam optimizers
 beta1 = 0.5
@@ -115,15 +116,15 @@ def generate(features):
             self.output_layer = nn.Linear(64, nc, bias=False)
             self.actv_relu = nn.ReLU(True)
             self.actv_tanh = nn.Tanh()
-            self.input_cat_layer0 = nn.Linear(1, n_one_hot[0], bias=False)
-            self.input_cat_layer1 = nn.Linear(1, n_one_hot[1], bias=False)
-            self.input_cat_layer2 = nn.Linear(1, n_one_hot[2], bias=False)
-            self.input_cat_layer3 = nn.Linear(1, n_one_hot[3], bias=False)
-            self.input_cat_layer4 = nn.Linear(1, n_one_hot[4], bias=False)
-            self.input_cat_layer5 = nn.Linear(1, n_one_hot[5], bias=False)
             self.actv_softmax = nn.Softmax(dim=1)
             self.actv_onehot = OneHot
             self.actv_binary = Binary
+            self.cat_layers = []
+            for n in range(len(n_one_hot)):
+                self.cat_layers.append([
+                    nn.Linear(1, 16, bias=False),
+                    nn.Linear(16, n_one_hot[n], bias=False)
+                ])
 
         def forward(self, input):
             # Sequential model
@@ -134,46 +135,23 @@ def generate(features):
             x = self.output_layer(x)
             x = self.actv_tanh(x)
 
-            # Categorical inputs
-            x0 = x[:, 0] # Site A
-            x0 = torch.reshape(x0, (x0.shape[0], 1))
-            x1 = x[:, 1] # Site B
-            x1 = torch.reshape(x1, (x1.shape[0], 1))
-            x2 = x[:, 2] # Network Type A
-            x2 = torch.reshape(x2, (x2.shape[0], 1))
-            x3 = x[:, 3] # Network Type B
-            x3 = torch.reshape(x3, (x3.shape[0], 1))
-            x4 = x[:, 4] # Port A
-            x4 = torch.reshape(x4, (x4.shape[0], 1))
-            x5 = x[:, 5] # Port B
-            x5 = torch.reshape(x5, (x5.shape[0], 1))
-            x6 = x[:, 6:] # The rest
+            x1 = None
+            for n in range(len(n_one_hot)):
+                x0 = x[:, n]
+                x0 = torch.reshape(x0, (x0.shape[0], 1))
 
-            # Parallel dense layers
-            x0 = self.input_cat_layer0(x0)
-            x0 = self.actv_softmax(x0)
-            x0 = self.actv_onehot(x0)
-            x1 = self.input_cat_layer1(x1)
-            x1 = self.actv_softmax(x1)
-            x1 = self.actv_onehot(x1)
-            x2 = self.input_cat_layer2(x2)
-            x2 = self.actv_softmax(x2)
-            x2 = self.actv_onehot(x2)
-            x3 = self.input_cat_layer3(x3)
-            x3 = self.actv_softmax(x3)
-            x3 = self.actv_onehot(x3)
-            x4 = self.input_cat_layer4(x4)
-            x4 = self.actv_softmax(x4)
-            x4 = self.actv_onehot(x4)
-            x5 = self.input_cat_layer5(x5)
-            x5 = self.actv_softmax(x5)
-            x5 = self.actv_onehot(x5)
-            x6 = self.actv_binary(x6)
+                x0 = self.cat_layers[n][0](x0)
+                x0 = self.cat_layers[n][1](x0)
+                # x0 = self.cat_layers[n][2](x0)
+                x0 = self.actv_softmax(x0)
+                x0 = self.actv_onehot(x0)
 
-            # Concat x's
-            x = torch.cat((x0, x1, x2, x3, x4, x5, x6), 1)
+                if x1 is None:
+                    x1 = x0
+                else:
+                    x1 = torch.cat((x1, x0), 1)
 
-            return x
+            return x1
 
     # custom weights initialization called on netG and netD
     # try orthogonal matrix initialization
@@ -219,8 +197,8 @@ def generate(features):
     fake_label = 1.
 
     # Setup Adam optimizers for both G and D
-    optimizerD = optim.Adam(netD.parameters(), lr=lr, betas=(beta1, 0.999))
-    optimizerG = optim.Adam(netG.parameters(), lr=lr, betas=(beta1, 0.999))
+    optimizerD = optim.Adam(netD.parameters(), lr=lrD, betas=(beta1, 0.999))
+    optimizerG = optim.Adam(netG.parameters(), lr=lrG, betas=(beta1, 0.999))
 
     # Training Loop
     print_debug('Training started')
@@ -278,7 +256,7 @@ def generate(features):
 
             # Output training stats
             if i % 50 == 0:
-                output_stats = '[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f' % (epoch, num_epochs, i, len(dataloader),
+                output_stats = '[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f' % (epoch + 1, num_epochs, i, len(dataloader),
                          errD.item(), errG.item(), D_x, D_G_z1, D_G_z2)
                 print_debug(output_stats)
     print_debug('Training finished')

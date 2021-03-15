@@ -21,11 +21,14 @@ def map_ips(a_b, col, flow, data, tags):
         names = tags[n]
         for name in names:
             devices_header.append(n + ' ' + a_b + '_' + name)
+        devices_header.append(n + ' ' + a_b + '_NaN')
         for ip in flow[flow.columns[col]]:
             r = get_row(data, ip)
-            one_hot = [0] * len(names)
+            one_hot = [0] * (len(names) + 1)
             if r is not None:
                 one_hot[names.index(r[n][0])] = 1
+            else:
+                one_hot[len(one_hot) - 1] = 1
             devices.append(one_hot)
     return pd.DataFrame(devices, columns=devices_header)
 
