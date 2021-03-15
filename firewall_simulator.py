@@ -1,4 +1,5 @@
 import generate_features
+import pandas as pd
 
 device_data = None
 prefix_data = None
