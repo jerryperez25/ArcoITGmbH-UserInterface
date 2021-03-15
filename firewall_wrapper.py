@@ -20,7 +20,7 @@ def create_firewall_rules(device_data, prefix_data, app_data, flow_data):
     sleep(delay_time)
 
     print('Generating fake flow data')
-    features_1 = generate_gan_feature_data.generate(generator, headers, flow_data.shape[0])
+    features_1 = generate_gan_feature_data.generate(generator, headers, flow_data.shape[0] / 2)
     print('Generating completed')
     sleep(delay_time)
 

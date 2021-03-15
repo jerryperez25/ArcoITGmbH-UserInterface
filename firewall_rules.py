@@ -5,13 +5,13 @@ import firewall_tags
 
 def map_rule(name, threshold_decision):
     if '_' in name:
-        operator = ' = ' if not threshold_decision else ' != '
+        operator = ' = ' if threshold_decision else ' != '
         index = name.index('_')
         return name[0:index] + operator + name[index + 1:]
     else:
         tcp = 'TCP'
         udp = 'UDP'
-        if not threshold_decision:
+        if threshold_decision:
             return 'ALLOW ' + name
         else:
             return 'ALLOW ' + (tcp if name == udp else udp)
@@ -59,14 +59,26 @@ def format_tag_list(list_tags):
     if len(list_tags) == 0:
         return 'any'
     elif len(list_tags) == 1:
-        return 'tag ' + list_tags[0][0] + ' = ' + list_tags[0][1]
+        inner_label = list(list_tags.keys())[0]
+        inner_list = list_tags[inner_label]
+        return format_inner_list(inner_label, inner_list)
     else:
-        return '(' + ' AND '.join(list(map(lambda x: 'tag ' + x[0] + ' = ' + x[1], list_tags))) + ')'
+        formatted_tags = []
+        for k, v in list_tags.items():
+            formatted_tags.append(format_inner_list(k, v))
+        return '(' + ' AND '.join(formatted_tags) + ')'
+
+
+def format_inner_list(inner_label, inner_list):
+    if len(inner_list) == 1:
+        return 'tag ' + inner_label + ' = ' + inner_list[0]
+    else:
+        return '(' + ' OR '.join(list(map(lambda x: 'tag ' + inner_label + ' = ' + x, inner_list))) + ')'
 
 
 def format_port_list(list_ports):
     if len(list_ports) == 0:
-        return 'PORT = all'
+        return 'PORT all'
     elif len(list_ports) == 1:
         return 'PORT ' + str(list_ports[0])
     else:
@@ -80,8 +92,8 @@ def create_firewall_rules(rules, device_data, prefix_data, app_data):
 
     firewall_rules = []
     for r in rules:
-        from_tags = []
-        to_tags = []
+        from_tags = {}
+        to_tags = {}
         tcp_udp = 'both'
         ports = []
 
@@ -100,10 +112,10 @@ def create_firewall_rules(rules, device_data, prefix_data, app_data):
                             from_device_tags = append_exclusive(from_device_tags, device_tags[k], s.split(' != ')[1])
                         else:
                             to_device_tags = append_exclusive(to_device_tags, device_tags[k], s.split(' != ')[1])
-            for dt in from_device_tags:
-                from_tags.append((k, dt))
-            for dt in to_device_tags:
-                to_tags.append((k, dt))
+            if len(from_device_tags) > 0:
+                from_tags[k] = from_tags
+            if len(to_device_tags) > 0:
+                to_tags[k] = to_device_tags
         for k in prefix_tags.keys():
             from_prefix_tags = []
             to_prefix_tags = []
@@ -119,10 +131,10 @@ def create_firewall_rules(rules, device_data, prefix_data, app_data):
                             from_prefix_tags = append_exclusive(from_prefix_tags, prefix_tags[k], s.split(' != ')[1])
                         else:
                             to_prefix_tags = append_exclusive(to_prefix_tags, prefix_tags[k], s.split(' != ')[1])
-            for dt in from_prefix_tags:
-                from_tags.append((k, dt))
-            for dt in to_prefix_tags:
-                to_tags.append((k, dt))
+            if len(from_prefix_tags) > 0:
+                from_tags[k] = from_prefix_tags
+            if len(to_prefix_tags) > 0:
+                to_tags[k] = to_prefix_tags
         for k in list(port_tags.keys())[1:]:
             for s in r.split(' & '):
                 if k in s:
