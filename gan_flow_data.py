@@ -6,7 +6,7 @@ import torch.nn.parallel
 import torch.optim as optim
 from torch.utils.data import TensorDataset, DataLoader
 
-debug_level = 1
+debug_level = 0
 
 
 def print_debug(print_out):
@@ -20,10 +20,10 @@ def print_debug(print_out):
 workers = 2
 
 # Number of training epochs
-num_epochs = 10
+num_epochs = 3
 
 # Batch size during training
-batch_size = 4
+batch_size = 8
 
 # Size of z latent vector (i.e. size of generator input)
 nz = 100

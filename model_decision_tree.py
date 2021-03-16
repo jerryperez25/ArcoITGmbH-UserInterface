@@ -5,20 +5,27 @@ from sklearn.tree import DecisionTreeClassifier
 import matplotlib.pyplot as plt
 
 
-def create_X_y(X_0, X_1):
+def create_X_y(X_0, X_1, X_2=None):
     X = pd.concat((X_0, X_1), axis=0)
+    if X_2 is not None:
+        X = pd.concat((X, X_2), axis=0)
+
     y = []
     for _ in range(len(X_0)):
         y.append(0)
     for _ in range(len(X_1)):
         y.append(1)
+    if X_2 is not None:
+        for _ in range(len(X_2)):
+            y.append(1)
+
     return X, y
 
 
 def train_test_model(X, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
-    model = DecisionTreeClassifier()
+    model = DecisionTreeClassifier(max_leaf_nodes=10)
     model.fit(X_train, y_train)
 
     y0 = model.predict(X_test)
@@ -30,8 +37,8 @@ def train_test_model(X, y):
     return model, accuracy
 
 
-def generate(X_0, X_1, N_trees):
-    X, y = create_X_y(X_0, X_1)
+def generate(X_0, X_1, X_2=None, N_trees=1):
+    X, y = create_X_y(X_0, X_1, X_2)
     feature_names = X.columns.tolist()
 
     models = []
@@ -44,7 +51,8 @@ def generate(X_0, X_1, N_trees):
 if __name__ == "__main__":
     X_0 = pd.read_csv('data/features.csv')
     X_1 = pd.read_csv('data/features_gan.csv')
-    X, y = create_X_y(X_0, X_1)
+    X_2 = pd.read_csv('data/features_fake.csv')
+    X, y = create_X_y(X_0, X_1, X_2)
     feature_names = X.columns.tolist()
     model, accuracy = train_test_model(X, y)
     print('Accuracy: ' + str(accuracy * 100) + '%')

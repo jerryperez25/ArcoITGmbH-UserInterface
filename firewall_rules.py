@@ -159,11 +159,12 @@ def create_firewall_rules(rules, device_data, prefix_data, app_data):
         from_string = format_tag_list(from_tags)
         to_string = format_tag_list(to_tags)
         port_string = format_port_list(map_ports(ports, app_data))
-        if tcp_udp == 'both':
-            firewall_rules.append('FROM ' + from_string + ' TO ' + to_string + ' ALLOW tcp ' + port_string)
-            firewall_rules.append('FROM ' + from_string + ' TO ' + to_string + ' ALLOW udp ' + port_string)
-        else:
-            firewall_rules.append('FROM ' + from_string + ' TO ' + to_string + ' ALLOW ' + tcp_udp + ' ' + port_string)
+        # if tcp_udp == 'both':
+        #     firewall_rules.append('FROM ' + from_string + ' TO ' + to_string + ' ALLOW tcp ' + port_string)
+        #     firewall_rules.append('FROM ' + from_string + ' TO ' + to_string + ' ALLOW udp ' + port_string)
+        # else:
+        #     firewall_rules.append('FROM ' + from_string + ' TO ' + to_string + ' ALLOW ' + tcp_udp + ' ' + port_string)
+        firewall_rules.append('FROM ' + from_string + ' TO ' + to_string + ' ALLOW tcp ' + port_string)
     return firewall_rules
 
 
@@ -185,8 +186,9 @@ def generate(models, feature_names, device_data, prefix_data, app_data):
 if __name__ == "__main__":
     X_0 = pd.read_csv('data/features.csv', header=0)
     X_1 = pd.read_csv('data/features_gan.csv', header=0)
-    models, feature_names = model_decision_tree.generate(X_0, X_1, 10)
-    rules = get_rules(models[5], feature_names)
+    X_2 = pd.read_csv('data/features_fake.csv', header=0)
+    models, feature_names = model_decision_tree.generate(X_0, X_1, X_2, 1)
+    rules = get_rules(models[0], feature_names)
     print(*rules, sep='\n')
     device_data = pd.read_csv('data/devices.csv')
     prefix_data = pd.read_csv('data/prefixes.csv')

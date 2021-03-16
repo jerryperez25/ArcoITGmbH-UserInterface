@@ -18,12 +18,25 @@ def generate(features, n_samples):
     n_one_hot.append(2)
 
     data = []
-    for i in range(n_samples):
+    for i in range(int(n_samples)):
         r0 = np.random.randint(0, features.shape[0])
         r_feature = features.iloc[r0]
 
-        r1 = np.random.randint(0, len(n_one_hot))
+        weights = []
+        for i in range(len(n_one_hot)):
+            if i < 2:
+                weights.append(2)
+            elif i == len(n_one_hot) - 2:
+                weights.append(5)
+            elif i == len(n_one_hot) - 1:
+                weights.append(2)
+            else:
+                weights.append(1)
+        weights_sum = sum(weights)
+        for i in range(len(weights)):
+            weights[i] /= weights_sum
 
+        r1 = np.random.choice(len(n_one_hot), 1, p=weights)[0]
         col_i = 0
         for i in range(r1):
             col_i += n_one_hot[i]
@@ -35,7 +48,10 @@ def generate(features, n_samples):
 
         r2 = curr_value
         while r2 == curr_value:
-            r2 = np.random.randint(0, n_one_hot[r1])
+            if n_one_hot[r1] != 1:
+                r2 = np.random.randint(0, n_one_hot[r1])
+            else:
+                break
         curr_value += col_i
         col_i += r2
 
@@ -48,5 +64,5 @@ def generate(features, n_samples):
 
 if __name__ == "__main__":
     features_0 = pd.read_csv('data/features.csv')
-    features_1 = generate(features_0, 100)
+    features_1 = generate(features_0, features_0.shape[0] / 2)
     features_1.to_csv('data/features_fake.csv', index=False)
